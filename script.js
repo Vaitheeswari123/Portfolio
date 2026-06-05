@@ -406,4 +406,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1800);
         });
     }
+
+    /* ==========================================================================
+       CASE STUDY SLIDER/CAROUSEL CONTROLLER
+       ========================================================================== */
+    const sliderImages = document.querySelectorAll('#case-study-slider .case-study-img');
+    const csPrevBtn = document.getElementById('case-study-prev');
+    const csNextBtn = document.getElementById('case-study-next');
+    const counterText = document.getElementById('case-study-counter');
+    let currentSlide = 0;
+
+    if (sliderImages.length > 0 && csPrevBtn && csNextBtn && counterText) {
+        const updateSlider = () => {
+            sliderImages.forEach((img, idx) => {
+                img.classList.remove('active');
+                if (idx === currentSlide) {
+                    img.classList.add('active');
+                }
+            });
+            counterText.textContent = `${currentSlide + 1} / ${sliderImages.length}`;
+        };
+
+        csPrevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + sliderImages.length) % sliderImages.length;
+            updateSlider();
+        });
+
+        csNextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % sliderImages.length;
+            updateSlider();
+        });
+    }
 });
