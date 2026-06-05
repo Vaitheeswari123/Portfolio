@@ -165,29 +165,209 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       LIVE PROTOTYPE: ROOM SELECTOR LOGIC
+       LIVE PROTOTYPE: MULTI-SCREEN PHONE SIMULATOR
        ========================================================================== */
-    const roomCards = document.querySelectorAll('.room-selector-card');
-    const selectedRoomName = document.getElementById('selected-room-name');
-    const selectedRoomPrice = document.getElementById('selected-room-price');
-    
-    if (roomCards.length > 0 && selectedRoomName && selectedRoomPrice) {
-        roomCards.forEach(card => {
-            card.addEventListener('click', () => {
-                // Clear previous active states
-                roomCards.forEach(c => c.classList.remove('active'));
+    const simScreens = {
+        splash: document.getElementById('sim-screen-splash'),
+        login: document.getElementById('sim-screen-login'),
+        otp: document.getElementById('sim-screen-otp'),
+        list: document.getElementById('sim-screen-list'),
+        detail: document.getElementById('sim-screen-detail'),
+        success: document.getElementById('sim-screen-success')
+    };
+
+    const checkItems = {
+        splash: document.getElementById('chk-splash'),
+        login: document.getElementById('chk-login'),
+        otp: document.getElementById('chk-otp'),
+        list: document.getElementById('chk-list'),
+        detail: document.getElementById('chk-detail')
+    };
+
+    const phoneInput = document.getElementById('sim-login-phone');
+    const otpTimerText = document.getElementById('sim-otp-timer-text');
+    let otpInterval = null;
+    let otpTimerValue = 59;
+
+    function startOtpTimer() {
+        clearInterval(otpInterval);
+        otpTimerValue = 59;
+        otpTimerText.textContent = `00:59s`;
+        
+        otpInterval = setInterval(() => {
+            otpTimerValue--;
+            if (otpTimerValue <= 0) {
+                clearInterval(otpInterval);
+                otpTimerText.textContent = "Expired";
+            } else {
+                const sec = otpTimerValue < 10 ? `0${otpTimerValue}` : otpTimerValue;
+                otpTimerText.textContent = `00:${sec}s`;
+            }
+        }, 1000);
+    }
+
+    function stopOtpTimer() {
+        clearInterval(otpInterval);
+    }
+
+    function switchSimScreen(targetScreenKey) {
+        // Toggle visibility on all screens
+        Object.keys(simScreens).forEach(key => {
+            if (simScreens[key]) {
+                simScreens[key].classList.remove('active');
+            }
+        });
+
+        const activeScreen = simScreens[targetScreenKey];
+        if (activeScreen) {
+            activeScreen.classList.add('active');
+        }
+
+        // Manage Timer
+        if (targetScreenKey === 'otp') {
+            startOtpTimer();
+        } else {
+            stopOtpTimer();
+        }
+
+        // Manage Checklist states
+        const keys = ['splash', 'login', 'otp', 'list', 'detail'];
+        const targetIndex = keys.indexOf(targetScreenKey);
+
+        keys.forEach((key, index) => {
+            const chk = checkItems[key];
+            if (chk) {
+                chk.classList.remove('active', 'completed');
                 
-                // Add active state to clicked
-                card.classList.add('active');
-                
-                // Get data variables
-                const roomName = card.getAttribute('data-room');
-                const roomPrice = card.getAttribute('data-price');
-                
-                // Update text elements
-                selectedRoomName.textContent = roomName;
-                selectedRoomPrice.textContent = `$${roomPrice}.00/hr`;
-            });
+                if (targetScreenKey === 'success') {
+                    chk.classList.add('completed');
+                } else if (index < targetIndex) {
+                    chk.classList.add('completed');
+                } else if (index === targetIndex) {
+                    chk.classList.add('active');
+                }
+            }
+        });
+    }
+
+    // 1. Splash Screen Action
+    if (simScreens.splash) {
+        simScreens.splash.addEventListener('click', () => {
+            switchSimScreen('login');
+            // Auto fill phone number with delay for natural typing feel
+            if (phoneInput) {
+                phoneInput.value = '';
+                let index = 0;
+                const number = '9876543210';
+                const typeInterval = setInterval(() => {
+                    if (index < number.length) {
+                        phoneInput.value += number[index];
+                        index++;
+                    } else {
+                        clearInterval(typeInterval);
+                    }
+                }, 80);
+            }
+        });
+    }
+
+    // 2. Login Page Action
+    const loginContinueBtn = document.getElementById('sim-login-continue-btn');
+    if (loginContinueBtn) {
+        loginContinueBtn.addEventListener('click', () => {
+            if (phoneInput && !phoneInput.value) {
+                phoneInput.value = '9876543210';
+            }
+            switchSimScreen('otp');
+        });
+    }
+
+    // 3. OTP Action
+    const otpVerifyBtn = document.getElementById('sim-otp-verify-btn');
+    const otpCancelBtn = document.getElementById('sim-otp-cancel-btn');
+    const otpBackBtn = document.getElementById('sim-otp-back-btn');
+
+    if (otpVerifyBtn) {
+        otpVerifyBtn.addEventListener('click', () => {
+            switchSimScreen('list');
+        });
+    }
+
+    if (otpCancelBtn) {
+        otpCancelBtn.addEventListener('click', () => {
+            switchSimScreen('login');
+        });
+    }
+
+    if (otpBackBtn) {
+        otpBackBtn.addEventListener('click', () => {
+            switchSimScreen('login');
+        });
+    }
+
+    // Auto-focus logic for OTP inputs
+    const otpDigits = document.querySelectorAll('.otp-digit');
+    otpDigits.forEach((digitInput, idx) => {
+        digitInput.addEventListener('keyup', (e) => {
+            if (e.target.value.length === 1 && idx < otpDigits.length - 1) {
+                otpDigits[idx + 1].focus();
+            }
+        });
+    });
+
+    // 4. Listing Action
+    const chennaiCard = document.getElementById('sim-card-chennai');
+    const shootplotCard = document.getElementById('sim-card-shootplot');
+
+    if (chennaiCard) {
+        chennaiCard.addEventListener('click', () => {
+            switchSimScreen('detail');
+        });
+    }
+
+    if (shootplotCard) {
+        shootplotCard.addEventListener('click', () => {
+            alert("Prototype note: 'Shoot Plot.com' layout is locked for this demo. Please click 'Chennai Podcast' to continue the booking reservation flow!");
+        });
+    }
+
+    // 5. Reservation / Detail Actions
+    const reserveDetailBackBtn = document.getElementById('sim-detail-back-btn');
+    const reserveSubmitBtn = document.getElementById('sim-reserve-submit-btn');
+
+    if (reserveDetailBackBtn) {
+        reserveDetailBackBtn.addEventListener('click', () => {
+            switchSimScreen('list');
+        });
+    }
+
+    if (reserveSubmitBtn) {
+        reserveSubmitBtn.addEventListener('click', () => {
+            reserveSubmitBtn.disabled = true;
+            const originalText = reserveSubmitBtn.textContent;
+            reserveSubmitBtn.textContent = 'Reserving slot...';
+            
+            setTimeout(() => {
+                reserveSubmitBtn.disabled = false;
+                reserveSubmitBtn.textContent = originalText;
+                switchSimScreen('success');
+            }, 1200);
+        });
+    }
+
+    // 6. Success Done Action
+    const successDoneBtn = document.getElementById('success-done-btn');
+    if (successDoneBtn) {
+        successDoneBtn.addEventListener('click', () => {
+            switchSimScreen('splash');
+        });
+    }
+
+    // Main Reset Button
+    const resetSimBtn = document.getElementById('reset-sim-btn');
+    if (resetSimBtn) {
+        resetSimBtn.addEventListener('click', () => {
+            switchSimScreen('splash');
         });
     }
 
