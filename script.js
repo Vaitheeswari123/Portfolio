@@ -142,27 +142,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       CASE STUDY TABS FUNCTIONALITY
+       CASE STUDY SCROLL NAVIGATION & INDEX
        ========================================================================== */
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabPanes = document.querySelectorAll('.tab-pane');
+    const indexLinks = document.querySelectorAll('.cs-index-link');
+    const scrollSections = document.querySelectorAll('.cs-scroll-section');
+    const scrollContainer = document.querySelector('.case-study-scroll-content');
     
-    tabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetTab = btn.getAttribute('data-tab');
-            
-            // Remove active states
-            tabButtons.forEach(b => b.classList.remove('active'));
-            tabPanes.forEach(p => p.classList.remove('active'));
-            
-            // Set active states
-            btn.classList.add('active');
-            const targetPane = document.getElementById(`tab-${targetTab}`);
-            if (targetPane) {
-                targetPane.classList.add('active');
-            }
+    if (indexLinks.length > 0 && scrollContainer) {
+        indexLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Scroll to section inside the scrollable content container
+                    scrollContainer.scrollTo({
+                        top: targetSection.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active state immediately
+                    indexLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
         });
-    });
+
+        // Set up scroll spy observer
+        const observerOptions = {
+            root: scrollContainer,
+            rootMargin: '-10% 0px -70% 0px', // Trigger when section is in the middle of viewport
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const activeLink = document.querySelector(`.cs-index-link[href="#${id}"]`);
+                    
+                    if (activeLink) {
+                        indexLinks.forEach(l => l.classList.remove('active'));
+                        activeLink.classList.add('active');
+                        
+                        // Mobile auto-scroll horizontal index to keep current link visible
+                        const sidebar = document.querySelector('.case-study-sidebar');
+                        if (sidebar && window.innerWidth <= 991) {
+                            const activeLinkLeft = activeLink.offsetLeft;
+                            const activeLinkWidth = activeLink.offsetWidth;
+                            const sidebarScrollLeft = sidebar.scrollLeft;
+                            const sidebarWidth = sidebar.offsetWidth;
+                            
+                            if (activeLinkLeft < sidebarScrollLeft || (activeLinkLeft + activeLinkWidth) > (sidebarScrollLeft + sidebarWidth)) {
+                                sidebar.scrollTo({
+                                    left: activeLinkLeft - 20,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+
+        scrollSections.forEach(section => observer.observe(section));
+    }
 
     /* ==========================================================================
        LIVE PROTOTYPE: MULTI-SCREEN PHONE SIMULATOR

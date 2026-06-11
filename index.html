@@ -366,920 +366,911 @@
                     <span class="badge"><i class="fa-solid fa-headset"></i> UX Case Study</span>
                 </div>
                 <h2>Podspace — Podcast Rental Studio App</h2>
-                <div class="modal-tabs">
-                    <button class="tab-btn active" data-tab="journey">1. User Journey Map</button>
-                    <button class="tab-btn" data-tab="quantitative">2. Quantitative Analysis</button>
-                    <button class="tab-btn" data-tab="qualitative">3. Qualitative Analysis</button>
-                    <button class="tab-btn" data-tab="info-arch">4. Information Architecture</button>
-                    <button class="tab-btn" data-tab="empathy">5. Empathy Mapping</button>
-                    <button class="tab-btn" data-tab="problem">6. Opportunity</button>
-                    <button class="tab-btn" data-tab="wireframes">7. Design System</button>
-                    <button class="tab-btn" data-tab="prototype">8. Interactive Prototype</button>
-                </div>
             </div>
-            <div class="modal-body">
-                <!-- Tab: User Journey Map -->
-                <div class="tab-pane active" id="tab-journey">
-                    <div class="journey-header">
-                        <h3>User Journey Map</h3>
-                        <p class="lead">Visualizing the end-to-end user experience for podcasters, mapping stages from initial awareness to final content publishing.</p>
-                    </div>
-                    <div class="journey-scroll-wrapper">
-                        <div class="journey-stages-timeline">
-                            <!-- Stage 1 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 1</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-pink"><i class="fa-solid fa-bullhorn"></i></div>
-                                    <h4>Awareness</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Find a place to record a podcast</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Search online, Google, YouTube, social media</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>Is there a nearby studio for me?</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Too many options, unclear pricing</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> SEO website, clear value prop</span>
-                                </div>
-                            </div>
+            
+            <div class="modal-body scroll-layout">
+                <!-- Sticky Sidebar navigation -->
+                <aside class="case-study-sidebar">
+                    <ul class="sidebar-index">
+                        <li><a href="#cs-problem" class="cs-index-link active"><span class="step-num">01</span> The Opportunity</a></li>
+                        <li><a href="#cs-empathy" class="cs-index-link"><span class="step-num">02</span> Empathy Mapping</a></li>
+                        <li><a href="#cs-journey" class="cs-index-link"><span class="step-num">03</span> User Journey Map</a></li>
+                        <li><a href="#cs-info-arch" class="cs-index-link"><span class="step-num">04</span> Target Persona</a></li>
+                        <li><a href="#cs-quantitative" class="cs-index-link"><span class="step-num">05</span> Quantitative Analysis</a></li>
+                        <li><a href="#cs-qualitative" class="cs-index-link"><span class="step-num">06</span> Qualitative Analysis</a></li>
+                        <li><a href="#cs-wireframes" class="cs-index-link"><span class="step-num">07</span> Design System</a></li>
+                        <li><a href="#cs-prototype" class="cs-index-link"><span class="step-num">08</span> Interactive Prototype</a></li>
+                    </ul>
+                </aside>
 
-                            <!-- Stage 2 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 2</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-purple"><i class="fa-solid fa-magnifying-glass"></i></div>
-                                    <h4>Consideration</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Compare different studios</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Check studio details, equipment, pricing</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>Is this studio worth the price?</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Missing equipment details, reviews</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Equipment lists, studio photos</span>
-                                </div>
+                <!-- Main scrollable content -->
+                <div class="case-study-scroll-content">
+                    <!-- Section 1: Opportunity -->
+                    <div class="cs-scroll-section" id="cs-problem">
+                        <div class="tab-grid">
+                            <div>
+                                <h3>The Opportunity</h3>
+                                <p class="lead">With the rapid growth of content creators and remote podcasters, finding professional, high-end, soundproof studios with premium recording equipment has become extremely chaotic and complex.</p>
+                                <p>Most existing solutions are static, lack real-time room availability, require long-drawn email threads, and do not offer customized high-end mic/equipment selection packages. </p>
+                                <h3>Key Goals</h3>
+                                <ul class="bullet-list">
+                                    <li><strong>Seamless Scheduling:</strong> Direct visual calendar selection for soundproof podcast studios.</li>
+                                    <li><strong>Equipment Customization:</strong> Easy hardware bundles addition (e.g. Shure SM7B, Rødecaster Pro II).</li>
+                                    <li><strong>Interactive Space Booking:</strong> Real-time pricing models calculated by hours/slots.</li>
+                                </ul>
                             </div>
-
-                            <!-- Stage 3 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 3</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-teal"><i class="fa-regular fa-calendar-check"></i></div>
-                                    <h4>Booking</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Reserve a recording slot</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Select date, time, studio, confirm booking</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>I hope the booking is quick.</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Complicated booking process</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> One-tap booking, calendar sync</span>
-                                </div>
-                            </div>
-
-                            <!-- Stage 4 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 4</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-blue"><i class="fa-solid fa-clipboard-list"></i></div>
-                                    <h4>Preparation</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Get ready for recording</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Bring scripts, guests, equipment</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>Will everything work smoothly?</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Forgetting requirements</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Pre-recording checklist</span>
-                                </div>
-                            </div>
-
-                            <!-- Stage 5 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 5</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-yellow"><i class="fa-solid fa-microphone"></i></div>
-                                    <h4>Recording</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Record podcast episode</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Use microphones, cameras, software</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>I hope audio quality is good.</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Technical issues, setup confusion</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Technician support, setup tutorials</span>
-                                </div>
-                            </div>
-
-                            <!-- Stage 6 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 6</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-coral"><i class="fa-solid fa-sliders"></i></div>
-                                    <h4>Post-Recording</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Get edited content</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Download files or request editing</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>When will I receive my files?</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Delay in delivery</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Cloud download, tracker progress</span>
-                                </div>
-                            </div>
-
-                            <!-- Stage 7 -->
-                            <div class="journey-stage-card">
-                                <div class="stage-badge">Stage 7</div>
-                                <div class="stage-title-row">
-                                    <div class="stage-icon-circle accent-green"><i class="fa-solid fa-share-nodes"></i></div>
-                                    <h4>Sharing / Publishing</h4>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Goal</span>
-                                    <span class="meta-val">Publish and share content</span>
-                                </div>
-                                <div class="stage-meta-item">
-                                    <span class="meta-label">Actions</span>
-                                    <span class="meta-val">Upload to podcast platforms</span>
-                                </div>
-                                <div class="stage-quote-bubble">
-                                    <span class="quote-symbol">“</span>
-                                    <p>I want it to look professional.</p>
-                                </div>
-                                <div class="stage-meta-item stage-pain-points">
-                                    <span class="meta-label">Pain Points</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Format confusion</span>
-                                </div>
-                                <div class="stage-meta-item stage-opps">
-                                    <span class="meta-label">Opportunities</span>
-                                    <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Publishing guide, export formats</span>
+                            <div class="visual-pane">
+                                <div class="glass-card stat-detail-card">
+                                    <h4>UX Core Focuses</h4>
+                                    <div class="flow-step">
+                                        <div class="step-num">01</div>
+                                        <div>
+                                            <h5>Discover Rooms</h5>
+                                            <p>Dynamic sorting by capacity, acoustics, and pricing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flow-step">
+                                        <div class="step-num">02</div>
+                                        <div>
+                                            <h5>Custom Hardware</h5>
+                                            <p>Dynamic addon selectors with real-time bill calculations.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flow-step">
+                                        <div class="step-num">03</div>
+                                        <div>
+                                            <h5>Instant Pass</h5>
+                                            <p>NFC/QR-based studio check-in for digital convenience.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Tab: Quantitative Analysis -->
-                <div class="tab-pane" id="tab-quantitative">
-                    <div class="qualitative-layout">
-                        <!-- Top Section: Quantitative Competitor Review -->
-                        <div class="qualitative-section">
-                            <h3>Quantitative Analysis</h3>
-                            <p class="section-desc">To understand user expectations and market opportunities for PodSpace, a review analysis was conducted on leading studio rentals and podcast platforms.</p>
+                    <!-- Section 2: Empathy Mapping -->
+                    <div class="cs-scroll-section" id="cs-empathy">
+                        <div class="empathy-header">
+                            <h3>Empathy Map</h3>
+                            <p class="lead">Gaining deeper insights into the user's sensory, emotional, and cognitive experiences to build a human-centric solution.</p>
+                        </div>
+                        <div class="empathy-quadrants-grid">
+                            <!-- Says -->
+                            <div class="empathy-quadrant-card color-says">
+                                <div class="quadrant-header">
+                                    <div class="quadrant-icon"><i class="fa-solid fa-comment"></i></div>
+                                    <h4>SAYS</h4>
+                                </div>
+                                <ul class="quadrant-list">
+                                    <li>"I need a studio with professional recording equipment."</li>
+                                    <li>"I want to see studio photos and equipment details before booking."</li>
+                                    <li>"Transparent pricing helps me make faster decisions."</li>
+                                    <li>"User reviews help me trust a studio."</li>
+                                    <li>"I prefer booking studios from my mobile device."</li>
+                                </ul>
+                            </div>
                             
-                            <div class="competitor-split-grid">
-                                <!-- Ratings Charts -->
-                                <div class="glass-card ratings-card">
-                                    <h4>Review Ratings Comparison</h4>
-                                    <div class="rating-bar-wrapper">
-                                        <div class="rating-bar-info">
-                                            <span class="comp-name">Giggster <span class="comp-type">(Direct Competitor)</span></span>
-                                            <span class="comp-score">4.8/5</span>
-                                        </div>
-                                        <div class="rating-bar-track">
-                                            <div class="rating-bar-fill fill-direct" style="width: 96%"></div>
-                                        </div>
+                            <!-- Does -->
+                            <div class="empathy-quadrant-card color-does">
+                                <div class="quadrant-header">
+                                    <div class="quadrant-icon"><i class="fa-solid fa-eye"></i></div>
+                                    <h4>DOES</h4>
+                                </div>
+                                <ul class="quadrant-list">
+                                    <li>Searches studios based on location and availability.</li>
+                                    <li>Compares studio prices and amenities.</li>
+                                    <li>Reads ratings and reviews before booking.</li>
+                                    <li>Checks available time slots frequently.</li>
+                                    <li>Books studios for upcoming podcast recordings.</li>
+                                    <li>Uses filters to find suitable studios quickly.</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Feels -->
+                            <div class="empathy-quadrant-card color-feels">
+                                <div class="quadrant-header">
+                                    <div class="quadrant-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <h4>FEELS</h4>
+                                </div>
+                                <ul class="quadrant-list">
+                                    <li>Frustrated when pricing is unclear.</li>
+                                    <li>Concerned about studio quality before arrival.</li>
+                                    <li>Confused when availability is not updated in real time.</li>
+                                    <li>Confident when studios have verified reviews.</li>
+                                    <li>Satisfied when booking is completed smoothly.</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Thinks -->
+                            <div class="empathy-quadrant-card color-thinks">
+                                <div class="quadrant-header">
+                                    <div class="quadrant-icon"><i class="fa-solid fa-brain"></i></div>
+                                    <h4>THINKS</h4>
+                                </div>
+                                <ul class="quadrant-list">
+                                    <li>"A centralized platform would save me time."</li>
+                                    <li>"Real-time availability should always be visible."</li>
+                                    <li>"Verified studios are more trustworthy."</li>
+                                    <li>"Quick booking options would improve my workflow."</li>
+                                    <li>"Saved preferences could make repeat bookings easier."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: User Journey Map -->
+                    <div class="cs-scroll-section" id="cs-journey">
+                        <div class="journey-header">
+                            <h3>User Journey Map</h3>
+                            <p class="lead">Visualizing the end-to-end user experience for podcasters, mapping stages from initial awareness to final content publishing.</p>
+                        </div>
+                        <div class="journey-scroll-wrapper">
+                            <div class="journey-stages-timeline">
+                                <!-- Stage 1 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 1</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-pink"><i class="fa-solid fa-bullhorn"></i></div>
+                                        <h4>Awareness</h4>
                                     </div>
-                                    <div class="rating-bar-wrapper">
-                                        <div class="rating-bar-info">
-                                            <span class="comp-name">Peerspace <span class="comp-type">(Direct Competitor)</span></span>
-                                            <span class="comp-score">4.8/5</span>
-                                        </div>
-                                        <div class="rating-bar-track">
-                                            <div class="rating-bar-fill fill-direct" style="width: 96%"></div>
-                                        </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Find a place to record a podcast</span>
                                     </div>
-                                    <div class="rating-bar-wrapper">
-                                        <div class="rating-bar-info">
-                                            <span class="comp-name">Soundtrap <span class="comp-type">(Indirect Competitor)</span></span>
-                                            <span class="comp-score">4.0/5</span>
-                                        </div>
-                                        <div class="rating-bar-track">
-                                            <div class="rating-bar-fill fill-indirect" style="width: 80%"></div>
-                                        </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Search online, Google, YouTube, social media</span>
                                     </div>
-                                    <div class="rating-bar-wrapper">
-                                        <div class="rating-bar-info">
-                                            <span class="comp-name">Zencastr <span class="comp-type">(Indirect Competitor)</span></span>
-                                            <span class="comp-score">3.5/5</span>
-                                        </div>
-                                        <div class="rating-bar-track">
-                                            <div class="rating-bar-fill fill-indirect" style="width: 70%"></div>
-                                        </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>Is there a nearby studio for me?</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Too many options, unclear pricing</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> SEO website, clear value prop</span>
                                     </div>
                                 </div>
+
+                                <!-- Stage 2 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 2</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-purple"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                        <h4>Consideration</h4>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Compare different studios</span>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Check studio details, equipment, pricing</span>
+                                    </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>Is this studio worth the price?</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Missing equipment details, reviews</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Equipment lists, studio photos</span>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 3 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 3</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-teal"><i class="fa-regular fa-calendar-check"></i></div>
+                                        <h4>Booking</h4>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Reserve a recording slot</span>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Select date, time, studio, confirm booking</span>
+                                    </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>I hope the booking is quick.</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Complicated booking process</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> One-tap booking, calendar sync</span>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 4 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 4</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-blue"><i class="fa-solid fa-clipboard-list"></i></div>
+                                        <h4>Preparation</h4>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Get ready for recording</span>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Bring scripts, guests, equipment</span>
+                                    </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>Will everything work smoothly?</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Forgetting requirements</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Pre-recording checklist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 5 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 5</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-yellow"><i class="fa-solid fa-microphone"></i></div>
+                                        <h4>Recording</h4>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Record podcast episode</span>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Use microphones, cameras, software</span>
+                                    </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>I hope audio quality is good.</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Technical issues, setup confusion</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Technician support, setup tutorials</span>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 6 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 6</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-coral"><i class="fa-solid fa-sliders"></i></div>
+                                        <h4>Post-Recording</h4>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Get edited content</span>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Download files or request editing</span>
+                                    </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>When will I receive my files?</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Delay in delivery</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Cloud download, tracker progress</span>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 7 -->
+                                <div class="journey-stage-card">
+                                    <div class="stage-badge">Stage 7</div>
+                                    <div class="stage-title-row">
+                                        <div class="stage-icon-circle accent-green"><i class="fa-solid fa-share-nodes"></i></div>
+                                        <h4>Sharing / Publishing</h4>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Goal</span>
+                                        <span class="meta-val">Publish and share content</span>
+                                    </div>
+                                    <div class="stage-meta-item">
+                                        <span class="meta-label">Actions</span>
+                                        <span class="meta-val">Upload to podcast platforms</span>
+                                    </div>
+                                    <div class="stage-quote-bubble">
+                                        <span class="quote-symbol">“</span>
+                                        <p>I want it to look professional.</p>
+                                    </div>
+                                    <div class="stage-meta-item stage-pain-points">
+                                        <span class="meta-label">Pain Points</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Format confusion</span>
+                                    </div>
+                                    <div class="stage-meta-item stage-opps">
+                                        <span class="meta-label">Opportunities</span>
+                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Publishing guide, export formats</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Target Persona -->
+                    <div class="cs-scroll-section" id="cs-info-arch">
+                        <div class="tab-grid persona-full-grid">
+                            <div class="persona-sidebar glass-card">
+                                <div class="persona-avatar-container">
+                                    <div class="persona-avatar">VK</div>
+                                    <div class="persona-avatar-glow"></div>
+                                </div>
+                                <h3>Vignesh Kumar</h3>
+                                <span class="persona-role-badge">Podcast Creator</span>
+                                <div class="persona-demographics">
+                                    <div class="dem-row">
+                                        <span class="dem-label">Age</span>
+                                        <span class="dem-val">27</span>
+                                    </div>
+                                    <div class="dem-row">
+                                        <span class="dem-label">Location</span>
+                                        <span class="dem-val">Chennai, India</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="persona-main-content">
+                                <div class="glass-card quote-card-full">
+                                    <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                                    <p class="persona-quote">"I need a fast and transparent booking experience."</p>
+                                </div>
                                 
-                                <!-- Insights and Ops -->
-                                <div class="insights-container">
-                                    <div class="glass-card insights-card">
-                                        <h4><i class="fa-solid fa-lightbulb"></i> Key Insights</h4>
+                                <div class="persona-grid-goals-pains">
+                                    <div class="glass-card goal-card">
+                                        <h4><i class="fa-solid fa-circle-check text-accent"></i> Goals</h4>
                                         <ul class="bullet-list-tight">
-                                            <li>Direct studio-booking platforms receive higher satisfaction scores (4.8/5).</li>
-                                            <li>Users value simple booking processes and transparent pricing.</li>
-                                            <li>Podcast creation tools score lower due to technical complexity and collaboration challenges.</li>
-                                            <li>There is an opportunity for PodSpace to combine easy studio discovery with creator-focused features.</li>
+                                            <li>Find nearby studios</li>
+                                            <li>Book quickly</li>
+                                            <li>Manage reservations</li>
+                                        </ul>
+                                    </div>
+                                    <div class="glass-card pain-card">
+                                        <h4><i class="fa-solid fa-triangle-exclamation text-rose"></i> Pain Points</h4>
+                                        <ul class="bullet-list-tight">
+                                            <li>Hidden fees</li>
+                                            <li>Poor availability info</li>
+                                            <li>Complex booking process</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Design Opportunities and Impact -->
-                        <div class="qualitative-section opportunities-impact-section">
-                            <div class="opps-impact-grid">
-                                <div class="glass-card opps-card">
-                                    <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Design Opportunities for PodSpace</h4>
-                                    <ul class="bullet-list-tight">
-                                        <li>Streamline studio search and booking flow.</li>
-                                        <li>Provide real-time studio availability.</li>
-                                        <li>Offer transparent pricing and secure payments.</li>
-                                        <li>Enable creators to manage bookings from a single dashboard.</li>
-                                        <li>Reduce friction during studio reservation and confirmation.</li>
+                    <!-- Section 5: Quantitative Analysis -->
+                    <div class="cs-scroll-section" id="cs-quantitative">
+                        <div class="qualitative-layout">
+                            <div class="qualitative-section">
+                                <h3>Quantitative Analysis</h3>
+                                <p class="section-desc">To understand user expectations and market opportunities for PodSpace, a review analysis was conducted on leading studio rentals and podcast platforms.</p>
+                                
+                                <div class="competitor-split-grid">
+                                    <!-- Ratings Charts -->
+                                    <div class="glass-card ratings-card">
+                                        <h4>Review Ratings Comparison</h4>
+                                        <div class="rating-bar-wrapper">
+                                            <div class="rating-bar-info">
+                                                <span class="comp-name">Giggster <span class="comp-type">(Direct Competitor)</span></span>
+                                                <span class="comp-score">4.8/5</span>
+                                            </div>
+                                            <div class="rating-bar-track">
+                                                <div class="rating-bar-fill fill-direct" style="width: 96%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="rating-bar-wrapper">
+                                            <div class="rating-bar-info">
+                                                <span class="comp-name">Peerspace <span class="comp-type">(Direct Competitor)</span></span>
+                                                <span class="comp-score">4.8/5</span>
+                                            </div>
+                                            <div class="rating-bar-track">
+                                                <div class="rating-bar-fill fill-direct" style="width: 96%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="rating-bar-wrapper">
+                                            <div class="rating-bar-info">
+                                                <span class="comp-name">Soundtrap <span class="comp-type">(Indirect Competitor)</span></span>
+                                                <span class="comp-score">4.0/5</span>
+                                            </div>
+                                            <div class="rating-bar-track">
+                                                <div class="rating-bar-fill fill-indirect" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="rating-bar-wrapper">
+                                            <div class="rating-bar-info">
+                                                <span class="comp-name">Zencastr <span class="comp-type">(Indirect Competitor)</span></span>
+                                                <span class="comp-score">3.5/5</span>
+                                            </div>
+                                            <div class="rating-bar-track">
+                                                <div class="rating-bar-fill fill-indirect" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Insights and Ops -->
+                                    <div class="insights-container">
+                                        <div class="glass-card insights-card">
+                                            <h4><i class="fa-solid fa-lightbulb"></i> Key Insights</h4>
+                                            <ul class="bullet-list-tight">
+                                                <li>Direct studio-booking platforms receive higher satisfaction scores (4.8/5).</li>
+                                                <li>Users value simple booking processes and transparent pricing.</li>
+                                                <li>Podcast creation tools score lower due to technical complexity and collaboration challenges.</li>
+                                                <li>There is an opportunity for PodSpace to combine easy studio discovery with creator-focused features.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Design Opportunities and Impact -->
+                            <div class="qualitative-section opportunities-impact-section">
+                                <div class="opps-impact-grid">
+                                    <div class="glass-card opps-card">
+                                        <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Design Opportunities for PodSpace</h4>
+                                        <ul class="bullet-list-tight">
+                                            <li>Streamline studio search and booking flow.</li>
+                                            <li>Provide real-time studio availability.</li>
+                                            <li>Offer transparent pricing and secure payments.</li>
+                                            <li>Enable creators to manage bookings from a single dashboard.</li>
+                                            <li>Reduce friction during studio reservation and confirmation.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="glass-card impact-card">
+                                        <h4><i class="fa-solid fa-circle-chevron-right"></i> Impact on Product Design</h4>
+                                        <p>The findings influenced the design of PodSpace by prioritizing:</p>
+                                        <div class="impact-pill-grid">
+                                            <span class="impact-pill"><i class="fa-solid fa-gauge-high"></i> Fast studio discovery</span>
+                                            <span class="impact-pill"><i class="fa-solid fa-calendar-plus"></i> Simple reservation process</span>
+                                            <span class="impact-pill"><i class="fa-solid fa-credit-card"></i> Clear payment flow</span>
+                                            <span class="impact-pill"><i class="fa-solid fa-clock-rotate-left"></i> Booking status tracking</span>
+                                            <span class="impact-pill"><i class="fa-solid fa-smile-beam"></i> Creator-friendly user experience</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 6: Qualitative Analysis -->
+                    <div class="cs-scroll-section" id="cs-qualitative">
+                        <div class="qualitative-layout">
+                            <!-- Qualitative theme mapping -->
+                            <div class="qualitative-section theme-solutions-section">
+                                <h3>Qualitative Analysis</h3>
+                                <p class="section-desc">Identified core themes of user needs and how PodSpace solves them through UX/UI solutions.</p>
+                                
+                                <div class="theme-grid">
+                                    <div class="theme-card color-transparency">
+                                        <div class="theme-header">
+                                            <div class="theme-icon"><i class="fa-solid fa-eye"></i></div>
+                                            <h4>Transparency</h4>
+                                        </div>
+                                        <div class="theme-body">
+                                            <div class="need-box">
+                                                <span class="box-label">User Need</span>
+                                                <p>Clear pricing</p>
+                                            </div>
+                                            <div class="solution-box">
+                                                <span class="box-label">PodSpace Solution</span>
+                                                <p>Upfront fee breakdown</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card color-trust">
+                                        <div class="theme-header">
+                                            <div class="theme-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                            <h4>Trust</h4>
+                                        </div>
+                                        <div class="theme-body">
+                                            <div class="need-box">
+                                                <span class="box-label">User Need</span>
+                                                <p>Reliable service</p>
+                                            </div>
+                                            <div class="solution-box">
+                                                <span class="box-label">PodSpace Solution</span>
+                                                <p>Verified studios & reviews</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card color-convenience">
+                                        <div class="theme-header">
+                                            <div class="theme-icon"><i class="fa-solid fa-bolt"></i></div>
+                                            <h4>Convenience</h4>
+                                        </div>
+                                        <div class="theme-body">
+                                            <div class="need-box">
+                                                <span class="box-label">User Need</span>
+                                                <p>Easy booking</p>
+                                            </div>
+                                            <div class="solution-box">
+                                                <span class="box-label">PodSpace Solution</span>
+                                                <p>Simple booking flow</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card color-support">
+                                        <div class="theme-header">
+                                            <div class="theme-icon"><i class="fa-solid fa-headset"></i></div>
+                                            <h4>Support</h4>
+                                        </div>
+                                        <div class="theme-body">
+                                            <div class="need-box">
+                                                <span class="box-label">User Need</span>
+                                                <p>Quick issue resolution</p>
+                                            </div>
+                                            <div class="solution-box">
+                                                <span class="box-label">PodSpace Solution</span>
+                                                <p>In-app customer support</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card color-quality">
+                                        <div class="theme-header">
+                                            <div class="theme-icon"><i class="fa-solid fa-star"></i></div>
+                                            <h4>Quality</h4>
+                                        </div>
+                                        <div class="theme-body">
+                                            <div class="need-box">
+                                                <span class="box-label">User Need</span>
+                                                <p>Accurate studio information</p>
+                                            </div>
+                                            <div class="solution-box">
+                                                <span class="box-label">PodSpace Solution</span>
+                                                <p>Verified listings & photos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 7: Design System -->
+                    <div class="cs-scroll-section" id="cs-wireframes">
+                        <div class="tab-grid">
+                            <div>
+                                <h3>Sleek Aesthetic Design System</h3>
+                                <p>Podspace uses a dark mode concept designed for nighttime creators, focusing on reducing fatigue, conveying professional acoustics vibes, and displaying neon indicators.</p>
+                                <table class="design-system-table">
+                                    <tr>
+                                        <th>Token</th>
+                                        <th>Value</th>
+                                        <th>Purpose</th>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-swatch bg-primary-gray"></span> Primary Color</td>
+                                        <td><code>#807979</code></td>
+                                        <td>Primary Actions, Brand Identity</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-swatch bg-violet-bg"></span> Background Color</td>
+                                        <td><code>#775D7B</code></td>
+                                        <td>App Background Canvas</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-swatch bg-surface-black"></span> Surface Color</td>
+                                        <td><code>#000000</code></td>
+                                        <td>Cards, Modals, & Surface Elements</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-swatch bg-text-bw"></span> Text Color</td>
+                                        <td><code>Black & White</code></td>
+                                        <td>High Contrast Typography Canvas</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="visual-pane">
+                                <div class="design-style-showcase glass-card">
+                                    <h4>Typography & Elements</h4>
+                                    <div style="font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">Aa Outfit Heading Bold</div>
+                                    <div style="font-family: 'Inter', sans-serif; font-size: 14px; opacity: 0.8; margin-bottom: 16px;">Aa Inter Body Text Regular</div>
+                                    <div class="fake-ui-elements">
+                                        <span class="fake-chip active" style="background: #000000; color: #ffffff; border-color: #807979;">Vocal Booth</span>
+                                        <span class="fake-chip" style="background: #ffffff; color: #000000; border-color: #807979;">Full Ensemble</span>
+                                        <span class="fake-chip" style="background: #000000; color: #ffffff; border-color: #807979; opacity: 0.6;">Video Cast</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 8: Interactive Prototype -->
+                    <div class="cs-scroll-section" id="cs-prototype">
+                        <div class="tab-grid">
+                            <div class="simulator-info">
+                                <h3>Interactive Mobile Prototype</h3>
+                                <p class="lead">Figma-to-Code High-Fidelity Simulator</p>
+                                <p>Interact directly with the simulated mobile device on the right. Tap through the screens to experience the actual reservation flow I designed for <strong>Podspace</strong>.</p>
+                                
+                                <div class="simulator-guide glass-card">
+                                    <h4>Interactive Flow Checklist:</h4>
+                                    <ul class="checklist-items">
+                                        <li id="chk-splash" class="active"><i class="fa-solid fa-circle-play"></i> Tap splash screen to start</li>
+                                        <li id="chk-login"><i class="fa-solid fa-circle"></i> Submit mobile login form</li>
+                                        <li id="chk-otp"><i class="fa-solid fa-circle"></i> Configure OTP verification</li>
+                                        <li id="chk-list"><i class="fa-solid fa-circle"></i> Choose chennai podcast studio in the studio details page</li>
+                                        <li id="chk-detail"><i class="fa-solid fa-circle"></i> Configure packages and reserve</li>
                                     </ul>
                                 </div>
                                 
-                                <div class="glass-card impact-card">
-                                    <h4><i class="fa-solid fa-circle-chevron-right"></i> Impact on Product Design</h4>
-                                    <p>The findings influenced the design of PodSpace by prioritizing:</p>
-                                    <div class="impact-pill-grid">
-                                        <span class="impact-pill"><i class="fa-solid fa-gauge-high"></i> Fast studio discovery</span>
-                                        <span class="impact-pill"><i class="fa-solid fa-calendar-plus"></i> Simple reservation process</span>
-                                        <span class="impact-pill"><i class="fa-solid fa-credit-card"></i> Clear payment flow</span>
-                                        <span class="impact-pill"><i class="fa-solid fa-clock-rotate-left"></i> Booking status tracking</span>
-                                        <span class="impact-pill"><i class="fa-solid fa-smile-beam"></i> Creator-friendly user experience</span>
-                                    </div>
+                                <div class="design-notes glass-card">
+                                    <h4>UX Highlights:</h4>
+                                    <p><small><strong>Dynamic HSL Dark Mode:</strong> Designed to minimize visual fatigue for audio editors who frequently work late hours in dimly lit studios.</small></p>
+                                    <p><small><strong>Frictionless Authentication:</strong> Replaced standard username/password with a phone + fast OTP flow to align with typical mobile usage habits.</small></p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Tab: Qualitative Analysis -->
-                <div class="tab-pane" id="tab-qualitative">
-                    <div class="qualitative-layout">
-                        <!-- Qualitative theme mapping -->
-                        <div class="qualitative-section theme-solutions-section">
-                            <h3>Qualitative Analysis</h3>
-                            <p class="section-desc">Identified core themes of user needs and how PodSpace solves them through UX/UI solutions.</p>
-                            
-                            <div class="theme-grid">
-                                <div class="theme-card color-transparency">
-                                    <div class="theme-header">
-                                        <div class="theme-icon"><i class="fa-solid fa-eye"></i></div>
-                                        <h4>Transparency</h4>
-                                    </div>
-                                    <div class="theme-body">
-                                        <div class="need-box">
-                                            <span class="box-label">User Need</span>
-                                            <p>Clear pricing</p>
-                                        </div>
-                                        <div class="solution-box">
-                                            <span class="box-label">PodSpace Solution</span>
-                                            <p>Upfront fee breakdown</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-card color-trust">
-                                    <div class="theme-header">
-                                        <div class="theme-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                                        <h4>Trust</h4>
-                                    </div>
-                                    <div class="theme-body">
-                                        <div class="need-box">
-                                            <span class="box-label">User Need</span>
-                                            <p>Reliable service</p>
-                                        </div>
-                                        <div class="solution-box">
-                                            <span class="box-label">PodSpace Solution</span>
-                                            <p>Verified studios & reviews</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-card color-convenience">
-                                    <div class="theme-header">
-                                        <div class="theme-icon"><i class="fa-solid fa-bolt"></i></div>
-                                        <h4>Convenience</h4>
-                                    </div>
-                                    <div class="theme-body">
-                                        <div class="need-box">
-                                            <span class="box-label">User Need</span>
-                                            <p>Easy booking</p>
-                                        </div>
-                                        <div class="solution-box">
-                                            <span class="box-label">PodSpace Solution</span>
-                                            <p>Simple booking flow</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-card color-support">
-                                    <div class="theme-header">
-                                        <div class="theme-icon"><i class="fa-solid fa-headset"></i></div>
-                                        <h4>Support</h4>
-                                    </div>
-                                    <div class="theme-body">
-                                        <div class="need-box">
-                                            <span class="box-label">User Need</span>
-                                            <p>Quick issue resolution</p>
-                                        </div>
-                                        <div class="solution-box">
-                                            <span class="box-label">PodSpace Solution</span>
-                                            <p>In-app customer support</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-card color-quality">
-                                    <div class="theme-header">
-                                        <div class="theme-icon"><i class="fa-solid fa-star"></i></div>
-                                        <h4>Quality</h4>
-                                    </div>
-                                    <div class="theme-body">
-                                        <div class="need-box">
-                                            <span class="box-label">User Need</span>
-                                            <p>Accurate studio information</p>
-                                        </div>
-                                        <div class="solution-box">
-                                            <span class="box-label">PodSpace Solution</span>
-                                            <p>Verified listings & photos</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab: Information Architecture -->
-                <div class="tab-pane" id="tab-info-arch">
-                    <div class="tab-grid persona-full-grid">
-                        <div class="persona-sidebar glass-card">
-                            <div class="persona-avatar-container">
-                                <div class="persona-avatar">VK</div>
-                                <div class="persona-avatar-glow"></div>
-                            </div>
-                            <h3>Vignesh Kumar</h3>
-                            <span class="persona-role-badge">Podcast Creator</span>
-                            <div class="persona-demographics">
-                                <div class="dem-row">
-                                    <span class="dem-label">Age</span>
-                                    <span class="dem-val">27</span>
-                                </div>
-                                <div class="dem-row">
-                                    <span class="dem-label">Location</span>
-                                    <span class="dem-val">Chennai, India</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="persona-main-content">
-                            <div class="glass-card quote-card-full">
-                                <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
-                                <p class="persona-quote">"I need a fast and transparent booking experience."</p>
+                                <button class="btn btn-secondary" id="reset-sim-btn">
+                                    <i class="fa-solid fa-rotate-left"></i> Reset Simulator
+                                </button>
                             </div>
                             
-                            <div class="persona-grid-goals-pains">
-                                <div class="glass-card goal-card">
-                                    <h4><i class="fa-solid fa-circle-check text-accent"></i> Goals</h4>
-                                    <ul class="bullet-list-tight">
-                                        <li>Find nearby studios</li>
-                                        <li>Book quickly</li>
-                                        <li>Manage reservations</li>
-                                    </ul>
-                                </div>
-                                <div class="glass-card pain-card">
-                                    <h4><i class="fa-solid fa-triangle-exclamation text-rose"></i> Pain Points</h4>
-                                    <ul class="bullet-list-tight">
-                                        <li>Hidden fees</li>
-                                        <li>Poor availability info</li>
-                                        <li>Complex booking process</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab: Empathy Mapping -->
-                <div class="tab-pane" id="tab-empathy">
-                    <div class="empathy-header">
-                        <h3>Empathy Map</h3>
-                        <p class="lead">Gaining deeper insights into the user's sensory, emotional, and cognitive experiences to build a human-centric solution.</p>
-                    </div>
-                    <div class="empathy-quadrants-grid">
-                        <!-- Says -->
-                        <div class="empathy-quadrant-card color-says">
-                            <div class="quadrant-header">
-                                <div class="quadrant-icon"><i class="fa-solid fa-comment"></i></div>
-                                <h4>SAYS</h4>
-                            </div>
-                            <ul class="quadrant-list">
-                                <li>"I need a studio with professional recording equipment."</li>
-                                <li>"I want to see studio photos and equipment details before booking."</li>
-                                <li>"Transparent pricing helps me make faster decisions."</li>
-                                <li>"User reviews help me trust a studio."</li>
-                                <li>"I prefer booking studios from my mobile device."</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Does -->
-                        <div class="empathy-quadrant-card color-does">
-                            <div class="quadrant-header">
-                                <div class="quadrant-icon"><i class="fa-solid fa-eye"></i></div>
-                                <h4>DOES</h4>
-                            </div>
-                            <ul class="quadrant-list">
-                                <li>Searches studios based on location and availability.</li>
-                                <li>Compares studio prices and amenities.</li>
-                                <li>Reads ratings and reviews before booking.</li>
-                                <li>Checks available time slots frequently.</li>
-                                <li>Books studios for upcoming podcast recordings.</li>
-                                <li>Uses filters to find suitable studios quickly.</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Feels -->
-                        <div class="empathy-quadrant-card color-feels">
-                            <div class="quadrant-header">
-                                <div class="quadrant-icon"><i class="fa-solid fa-heart"></i></div>
-                                <h4>FEELS</h4>
-                            </div>
-                            <ul class="quadrant-list">
-                                <li>Frustrated when pricing is unclear.</li>
-                                <li>Concerned about studio quality before arrival.</li>
-                                <li>Confused when availability is not updated in real time.</li>
-                                <li>Confident when studios have verified reviews.</li>
-                                <li>Satisfied when booking is completed smoothly.</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Thinks -->
-                        <div class="empathy-quadrant-card color-thinks">
-                            <div class="quadrant-header">
-                                <div class="quadrant-icon"><i class="fa-solid fa-brain"></i></div>
-                                <h4>THINKS</h4>
-                            </div>
-                            <ul class="quadrant-list">
-                                <li>"A centralized platform would save me time."</li>
-                                <li>"Real-time availability should always be visible."</li>
-                                <li>"Verified studios are more trustworthy."</li>
-                                <li>"Quick booking options would improve my workflow."</li>
-                                <li>"Saved preferences could make repeat bookings easier."</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab: Opportunity -->
-                <div class="tab-pane" id="tab-problem">
-                    <div class="tab-grid">
-                        <div>
-                            <h3>The Opportunity</h3>
-                            <p class="lead">With the rapid growth of content creators and remote podcasters, finding professional, high-end, soundproof studios with premium recording equipment has become extremely chaotic and complex.</p>
-                            <p>Most existing solutions are static, lack real-time room availability, require long-drawn email threads, and do not offer customized high-end mic/equipment selection packages. </p>
-                            <h3>Key Goals</h3>
-                            <ul class="bullet-list">
-                                <li><strong>Seamless Scheduling:</strong> Direct visual calendar selection for soundproof podcast studios.</li>
-                                <li><strong>Equipment Customization:</strong> Easy hardware bundles addition (e.g. Shure SM7B, Rødecaster Pro II).</li>
-                                <li><strong>Interactive Space Booking:</strong> Real-time pricing models calculated by hours/slots.</li>
-                            </ul>
-                        </div>
-                        <div class="visual-pane">
-                            <div class="glass-card stat-detail-card">
-                                <h4>UX Core Focuses</h4>
-                                <div class="flow-step">
-                                    <div class="step-num">01</div>
-                                    <div>
-                                        <h5>Discover Rooms</h5>
-                                        <p>Dynamic sorting by capacity, acoustics, and pricing.</p>
-                                    </div>
-                                </div>
-                                <div class="flow-step">
-                                    <div class="step-num">02</div>
-                                    <div>
-                                        <h5>Custom Hardware</h5>
-                                        <p>Dynamic addon selectors with real-time bill calculations.</p>
-                                    </div>
-                                </div>
-                                <div class="flow-step">
-                                    <div class="step-num">03</div>
-                                    <div>
-                                        <h5>Instant Pass</h5>
-                                        <p>NFC/QR-based studio check-in for digital convenience.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab: Design System -->
-                <div class="tab-pane" id="tab-wireframes">
-                    <div class="tab-grid">
-                        <div>
-                            <h3>Sleek Aesthetic Design System</h3>
-                            <p>Podspace uses a dark mode concept designed for nighttime creators, focusing on reducing fatigue, conveying professional acoustics vibes, and displaying neon indicators.</p>
-                            <table class="design-system-table">
-                                <tr>
-                                    <th>Token</th>
-                                    <th>Value</th>
-                                    <th>Purpose</th>
-                                </tr>
-                                <tr>
-                                    <td><span class="color-swatch bg-primary-gray"></span> Primary Color</td>
-                                    <td><code>#807979</code></td>
-                                    <td>Primary Actions, Brand Identity</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="color-swatch bg-violet-bg"></span> Background Color</td>
-                                    <td><code>#775D7B</code></td>
-                                    <td>App Background Canvas</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="color-swatch bg-surface-black"></span> Surface Color</td>
-                                    <td><code>#000000</code></td>
-                                    <td>Cards, Modals, & Surface Elements</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="color-swatch bg-text-bw"></span> Text Color</td>
-                                    <td><code>Black & White</code></td>
-                                    <td>High Contrast Typography Canvas</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="visual-pane">
-                            <div class="design-style-showcase glass-card">
-                                <h4>Typography & Elements</h4>
-                                <div style="font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">Aa Outfit Heading Bold</div>
-                                <div style="font-family: 'Inter', sans-serif; font-size: 14px; opacity: 0.8; margin-bottom: 16px;">Aa Inter Body Text Regular</div>
-                                <div class="fake-ui-elements">
-                                    <span class="fake-chip active" style="background: #000000; color: #ffffff; border-color: #807979;">Vocal Booth</span>
-                                    <span class="fake-chip" style="background: #ffffff; color: #000000; border-color: #807979;">Full Ensemble</span>
-                                    <span class="fake-chip" style="background: #000000; color: #ffffff; border-color: #807979; opacity: 0.6;">Video Cast</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab: High-Fidelity CSS Mockup -->
-                <div class="tab-pane" id="tab-prototype">
-                    <div class="tab-grid">
-                        <div class="simulator-info">
-                            <h3>Interactive Mobile Prototype</h3>
-                            <p class="lead">Figma-to-Code High-Fidelity Simulator</p>
-                            <p>Interact directly with the simulated mobile device on the right. Tap through the screens to experience the actual reservation flow I designed for <strong>Podspace</strong>.</p>
-                            
-                            <div class="simulator-guide glass-card">
-                                <h4>Interactive Flow Checklist:</h4>
-                                <ul class="checklist-items">
-                                    <li id="chk-splash" class="active"><i class="fa-solid fa-circle-play"></i> Tap splash screen to start</li>
-                                    <li id="chk-login"><i class="fa-solid fa-circle"></i> Submit mobile login form</li>
-                                    <li id="chk-otp"><i class="fa-solid fa-circle"></i> Configure OTP verification</li>
-                                    <li id="chk-list"><i class="fa-solid fa-circle"></i> Choose chennai podcast studio in the studio details page</li>
-                                    <li id="chk-detail"><i class="fa-solid fa-circle"></i> Configure packages and reserve</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="design-notes glass-card">
-                                <h4>UX Highlights:</h4>
-                                <p><small><strong>Dynamic HSL Dark Mode:</strong> Designed to minimize visual fatigue for audio editors who frequently work late hours in dimly lit studios.</small></p>
-                                <p><small><strong>Frictionless Authentication:</strong> Replaced standard username/password with a phone + fast OTP flow to align with typical mobile usage habits.</small></p>
-                            </div>
-
-                            <button class="btn btn-secondary" id="reset-sim-btn">
-                                <i class="fa-solid fa-rotate-left"></i> Reset Simulator
-                            </button>
-                        </div>
-                        
-                        <div class="visual-pane simulator-visual-pane">
-                            <!-- Mobile Phone Device Wrapper -->
-                            <div class="phone-device-container">
-                                <div class="phone-speaker"></div>
-                                <div class="phone-screen">
-                                    
-                                    <!-- Screen 1: Splash Screen -->
-                                    <div class="sim-screen sim-splash active" id="sim-screen-splash">
-                                        <img src="images/podspace_mockup.png" alt="Podspace Premium Interface Mockup" class="sim-splash-img">
-                                        <div class="splash-tap-hint">
-                                            <span>Tap Screen to Begin</span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Screen 2: Login Screen -->
-                                    <div class="sim-screen sim-login" id="sim-screen-login">
-                                        <div class="login-wrapper">
-                                            <h2 class="login-title">Log in with phone number</h2>
-                                            
-                                            <div class="sim-form-group">
-                                                <div class="phone-input-wrapper">
-                                                    <span class="phone-prefix">+91</span>
-                                                    <input type="text" class="sim-input" id="sim-login-phone" placeholder="98765 43210" maxlength="10">
-                                                </div>
+                            <div class="visual-pane simulator-visual-pane">
+                                <!-- Mobile Phone Device Wrapper -->
+                                <div class="phone-device-container">
+                                    <div class="phone-speaker"></div>
+                                    <div class="phone-screen">
+                                        
+                                        <!-- Screen 1: Splash Screen -->
+                                        <div class="sim-screen sim-splash active" id="sim-screen-splash">
+                                            <img src="images/podspace_mockup.png" alt="Podspace Premium Interface Mockup" class="sim-splash-img">
+                                            <div class="splash-tap-hint">
+                                                <span>Tap Screen to Begin</span>
+                                                <i class="fa-solid fa-chevron-down"></i>
                                             </div>
-                                            
-                                            <label class="sim-checkbox-label">
-                                                <input type="checkbox" checked class="sim-checkbox-real">
-                                                <span class="sim-checkbox-custom"></span>
-                                                Remember me
-                                            </label>
-                                            
-                                            <button class="sim-btn-primary" id="sim-login-continue-btn">Continue</button>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Screen 3: OTP Verification Screen -->
-                                    <div class="sim-screen sim-otp" id="sim-screen-otp">
-                                        <div class="otp-header">
-                                            <button class="sim-back-btn" id="sim-otp-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        </div>
-                                        <div class="otp-wrapper">
-                                            <h2 class="otp-title">OTP verification</h2>
-                                            <p class="otp-description">Please enter the OTP sent to your registered phone number to complete your verification.</p>
-                                            
-                                            <div class="otp-inputs-row">
-                                                <input type="text" class="otp-digit" maxlength="1" value="4">
-                                                <input type="text" class="otp-digit" maxlength="1" value="9">
-                                                <input type="text" class="otp-digit" maxlength="1" value="2">
-                                                <input type="text" class="otp-digit" maxlength="1" value="1">
-                                            </div>
-                                            
-                                            <div class="otp-timer-row">
-                                                <span class="otp-timer">Remaining time: <strong id="sim-otp-timer-text">00:59s</strong></span>
-                                                <button class="otp-resend-btn">Resend</button>
-                                            </div>
-                                            
-                                            <div class="otp-buttons-row">
-                                                <button class="sim-btn-primary" id="sim-otp-verify-btn">Verify</button>
-                                                <button class="sim-btn-secondary" id="sim-otp-cancel-btn">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Screen 4: Studio Listing Screen -->
-                                    <div class="sim-screen sim-list" id="sim-screen-list">
-                                        <!-- Sim Top Header -->
-                                        <div class="list-brand-header">
-                                            <div class="list-brand-title">
-                                                <i class="fa-solid fa-microphone-lines list-brand-logo"></i>
-                                                <span class="brand-text">POD<span>SPACE</span></span>
-                                            </div>
-                                            <p class="list-brand-subtitle">Your voice, Your studio</p>
                                         </div>
                                         
-                                        <!-- Search input -->
-                                        <div class="sim-search-container">
-                                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                                            <input type="text" class="sim-search-input" placeholder="Search studio..." value="Chennai Podcast">
-                                        </div>
-                                        
-                                        <!-- Selector text -->
-                                        <div class="studio-type-title">
-                                            <h3>Studio + Video Shooting & Editing</h3>
-                                            <span class="subtitle">Select Studio</span>
-                                        </div>
-                                        
-                                        <!-- Schedule bar -->
-                                        <div class="schedule-bar">
-                                            <span class="schedule-left">
-                                                <i class="fa-regular fa-calendar"></i>
-                                                Fri, 08 May 2026
-                                            </span>
-                                            <span class="schedule-right">
-                                                03.00 PM - 04.00 PM
-                                                <i class="fa-solid fa-pen-to-square edit-schedule-icon"></i>
-                                            </span>
-                                        </div>
-                                        
-                                        <!-- Studio Cards List -->
-                                        <div class="sim-cards-list">
-                                            <!-- Card 1: Chennai Podcast -->
-                                            <div class="sim-studio-card" id="sim-card-chennai">
-                                                <div class="studio-card-img-wrapper">
-                                                    <div class="mock-studio-logo-green">
-                                                        <i class="fa-solid fa-play"></i>
+                                        <!-- Screen 2: Login Screen -->
+                                        <div class="sim-screen sim-login" id="sim-screen-login">
+                                            <div class="login-wrapper">
+                                                <h2 class="login-title">Log in with phone number</h2>
+                                                
+                                                <div class="sim-form-group">
+                                                    <div class="phone-input-wrapper">
+                                                        <span class="phone-prefix">+91</span>
+                                                        <input type="text" class="sim-input" id="sim-login-phone" placeholder="98765 43210" maxlength="10">
                                                     </div>
                                                 </div>
-                                                <div class="studio-card-info">
-                                                    <h4 class="studio-title">Chennai Podcast</h4>
-                                                    <p class="studio-description">Welcome to ChennaiPodcast, We understand the power of visual story telling and professional audio.</p>
-                                                    <div class="studio-price-row">
-                                                        <span class="price-val">₹1499 per hour</span>
-                                                    </div>
-                                                    <div class="studio-rating-location">
-                                                        <span class="studio-rate"><i class="fa-solid fa-star"></i> 4.5</span>
-                                                        <span class="studio-loc"><i class="fa-solid fa-location-dot"></i> Adambakkam, Chennai.</span>
-                                                    </div>
+                                                
+                                                <label class="sim-checkbox-label">
+                                                    <input type="checkbox" checked class="sim-checkbox-real">
+                                                    <span class="sim-checkbox-custom"></span>
+                                                    Remember me
+                                                </label>
+                                                
+                                                <button class="sim-btn-primary" id="sim-login-continue-btn">Continue</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Screen 3: OTP Verification Screen -->
+                                        <div class="sim-screen sim-otp" id="sim-screen-otp">
+                                            <div class="otp-header">
+                                                <button class="sim-back-btn" id="sim-otp-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                                            </div>
+                                            <div class="otp-wrapper">
+                                                <h2 class="otp-title">OTP verification</h2>
+                                                <p class="otp-description">Please enter the OTP sent to your registered phone number to complete your verification.</p>
+                                                
+                                                <div class="otp-inputs-row">
+                                                    <input type="text" class="otp-digit" maxlength="1" value="4">
+                                                    <input type="text" class="otp-digit" maxlength="1" value="9">
+                                                    <input type="text" class="otp-digit" maxlength="1" value="2">
+                                                    <input type="text" class="otp-digit" maxlength="1" value="1">
+                                                </div>
+                                                
+                                                <div class="otp-timer-row">
+                                                    <span class="otp-timer">Remaining time: <strong id="sim-otp-timer-text">00:59s</strong></span>
+                                                    <button class="otp-resend-btn">Resend</button>
+                                                </div>
+                                                
+                                                <div class="otp-buttons-row">
+                                                    <button class="sim-btn-primary" id="sim-otp-verify-btn">Verify</button>
+                                                    <button class="sim-btn-secondary" id="sim-otp-cancel-btn">Cancel</button>
                                                 </div>
                                             </div>
+                                        </div>
+                                        
+                                        <!-- Screen 4: Studio Listing Screen -->
+                                        <div class="sim-screen sim-list" id="sim-screen-list">
+                                            <!-- Sim Top Header -->
+                                            <div class="list-brand-header">
+                                                <div class="list-brand-title">
+                                                    <i class="fa-solid fa-microphone-lines list-brand-logo"></i>
+                                                    <span class="brand-text">POD<span>SPACE</span></span>
+                                                </div>
+                                                <p class="list-brand-subtitle">Your voice, Your studio</p>
+                                            </div>
                                             
-                                            <!-- Card 2: Shoot Plot.com -->
-                                            <div class="sim-studio-card" id="sim-card-shootplot">
-                                                <div class="studio-card-img-wrapper">
-                                                    <div class="mock-studio-room-photo">
+                                            <div class="list-scrollable">
+                                                <!-- Search Bar -->
+                                                <div class="search-bar-sim">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <input type="text" placeholder="Search podcast studios..." class="sim-search-input" readonly value="Chennai">
+                                                </div>
+                                                
+                                                <h4 class="list-sec-title">Popular Studios near Chennai</h4>
+                                                
+                                                <!-- List Cards -->
+                                                <div class="studio-card-sim" id="sim-card-chennai">
+                                                    <div class="sc-img-placeholder sc-img-chennai">
+                                                        <i class="fa-solid fa-microphone-lines"></i>
+                                                        <span class="verified-tag-sim"><i class="fa-solid fa-shield-check"></i> Verified</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <div class="sc-title-row">
+                                                            <h5>Chennai Podcast</h5>
+                                                            <span class="sc-rating"><i class="fa-solid fa-star"></i> 4.5</span>
+                                                        </div>
+                                                        <p class="sc-location"><i class="fa-solid fa-map-pin"></i> Kodambakkam, Chennai</p>
+                                                        <div class="sc-footer">
+                                                            <span class="sc-price">₹1,499<small>/hr</small></span>
+                                                            <span class="sc-badge-action">View & Reserve <i class="fa-solid fa-chevron-right"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="studio-card-sim" id="sim-card-shootplot">
+                                                    <div class="sc-img-placeholder sc-img-shoot">
                                                         <i class="fa-solid fa-video"></i>
+                                                        <span class="verified-tag-sim"><i class="fa-solid fa-shield-check"></i> Verified</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <div class="sc-title-row">
+                                                            <h5>Shoot Plot.com</h5>
+                                                            <span class="sc-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                                                        </div>
+                                                        <p class="sc-location"><i class="fa-solid fa-map-pin"></i> T.Nagar, Chennai</p>
+                                                        <div class="sc-footer">
+                                                            <span class="sc-price">₹1,999<small>/hr</small></span>
+                                                            <span class="sc-badge-action locked">Locked <i class="fa-solid fa-lock"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="studio-card-info">
-                                                    <h4 class="studio-title">Shoot Plot.com</h4>
-                                                    <p class="studio-description">Perfect for Youtube videos, Personal Branding and Reels, Content.</p>
-                                                    <div class="studio-price-row">
-                                                        <span class="price-val">₹2500 per hour</span>
-                                                    </div>
-                                                    <div class="studio-rating-location">
-                                                        <span class="studio-rate"><i class="fa-solid fa-star"></i> 4</span>
-                                                        <span class="studio-loc"><i class="fa-solid fa-location-dot"></i> Thiruvanmyur, Chennai.</span>
-                                                    </div>
+                                            </div>
+                                            
+                                            <!-- Bottom Nav Bar -->
+                                            <div class="sim-bottom-bar">
+                                                <div class="bar-item active">
+                                                    <i class="fa-solid fa-house"></i>
+                                                    <span>Home</span>
+                                                </div>
+                                                <div class="bar-item">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                    <span>Bookings</span>
+                                                </div>
+                                                <div class="bar-item">
+                                                    <i class="fa-regular fa-bell"></i>
+                                                    <span>Alerts</span>
+                                                </div>
+                                                <div class="bar-item">
+                                                    <i class="fa-regular fa-user"></i>
+                                                    <span>User Profile</span>
                                                 </div>
                                             </div>
                                         </div>
                                         
-                                        <!-- Bottom Navbar -->
-                                        <div class="sim-bottom-nav">
-                                            <div class="nav-item active">
-                                                <div class="nav-icon-bg"><i class="fa-solid fa-lightbulb"></i></div>
-                                                <span>Studio Details</span>
+                                        <!-- Screen 5: Detail & Booking Screen -->
+                                        <div class="sim-screen sim-detail" id="sim-screen-detail">
+                                            <div class="detail-top-nav">
+                                                <button class="sim-back-btn" id="sim-detail-back-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                                <h3 class="detail-header-title">Chennai Podcast</h3>
+                                                <div class="detail-stars">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
                                             </div>
-                                            <div class="nav-item">
-                                                <i class="fa-solid fa-list-check"></i>
-                                                <span>Booking History</span>
-                                            </div>
-                                            <div class="nav-item">
-                                                <i class="fa-regular fa-user"></i>
-                                                <span>User Profile</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Screen 5: Detail & Booking Screen -->
-                                    <div class="sim-screen sim-detail" id="sim-screen-detail">
-                                        <div class="detail-top-nav">
-                                            <button class="sim-back-btn" id="sim-detail-back-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                                            <h3 class="detail-header-title">Chennai Podcast</h3>
-                                            <div class="detail-stars">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                            
+                                            <div class="detail-scrollable">
+                                                <a href="https://www.chennaipodcast.com" target="_blank" class="studio-link">https://www.chennaipodcast.com</a>
+                                                <p class="detail-text-desc">Welcome to chennaiPodcast, We understand the power of visual story telling and professional audio.</p>
+                                                
+                                                <!-- Mini Gallery -->
+                                                <div class="detail-gallery">
+                                                    <div class="gallery-photo gp-1">
+                                                        <i class="fa-solid fa-microphone"></i>
+                                                    </div>
+                                                    <div class="gallery-photo gp-2">
+                                                        <i class="fa-solid fa-sliders"></i>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Reservation Form -->
+                                                <div class="reserve-form-container">
+                                                    <h4 class="reserve-form-title">Reserve Slot Form</h4>
+                                                    
+                                                    <div class="reserve-row">
+                                                        <div class="reserve-input-box">
+                                                            <i class="fa-regular fa-calendar"></i>
+                                                            <input type="text" value="08/05/2026" class="reserve-input" readonly>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="reserve-grid-2">
+                                                        <div class="reserve-input-box">
+                                                            <i class="fa-regular fa-clock"></i>
+                                                            <input type="text" value="03:00 PM" class="reserve-input" readonly>
+                                                        </div>
+                                                        <div class="reserve-input-box">
+                                                            <i class="fa-regular fa-clock"></i>
+                                                            <input type="text" value="04:00 PM" class="reserve-input" readonly>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="packages-list">
+                                                        <label class="package-option">
+                                                            <input type="checkbox" class="package-check" data-price="1499" checked>
+                                                            <span class="package-custom-box"></span>
+                                                            <span class="package-name">Cinematic Experience-Lite</span>
+                                                            <span class="package-price">₹1499</span>
+                                                        </label>
+                                                        <label class="package-option">
+                                                            <input type="checkbox" class="package-check" data-price="2999">
+                                                            <span class="package-custom-box"></span>
+                                                            <span class="package-name">Cinematic Experience-Plus</span>
+                                                            <span class="package-price">₹2999</span>
+                                                        </label>
+                                                        <label class="package-option">
+                                                            <input type="checkbox" class="package-check" data-price="3499">
+                                                            <span class="package-custom-box"></span>
+                                                            <span class="package-name">Cinematic Experience-Pro</span>
+                                                            <span class="package-price">₹3499</span>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                    <button class="reserve-btn-submit" id="sim-reserve-submit-btn">Reserve Slot</button>
+                                                </div>
                                             </div>
                                         </div>
                                         
-                                        <div class="detail-scrollable">
-                                            <a href="https://www.chennaipodcast.com" target="_blank" class="studio-link">https://www.chennaipodcast.com</a>
-                                            <p class="detail-text-desc">Welcome to chennaiPodcast, We understand the power of visual story telling and professional audio.</p>
-                                            
-                                            <!-- Mini Gallery -->
-                                            <div class="detail-gallery">
-                                                <div class="gallery-photo gp-1">
-                                                    <i class="fa-solid fa-microphone"></i>
+                                        <!-- Screen 6: Success Confirmation Screen -->
+                                        <div class="sim-screen sim-success" id="sim-screen-success">
+                                            <div class="success-glow"></div>
+                                            <div class="success-content">
+                                                <div class="success-icon-badge">
+                                                    <i class="fa-solid fa-circle-check"></i>
                                                 </div>
-                                                <div class="gallery-photo gp-2">
-                                                    <i class="fa-solid fa-sliders"></i>
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Reservation Form -->
-                                            <div class="reserve-form-container">
-                                                <h4 class="reserve-form-title">Reserve Slot Form</h4>
+                                                <h3>Booking Confirmed!</h3>
+                                                <p class="success-summary">Your session at <strong>Chennai Podcast</strong> has been reserved for Friday, 08 May 2026 (03:00 PM - 04:00 PM).</p>
                                                 
-                                                <div class="reserve-row">
-                                                    <div class="reserve-input-box">
-                                                        <i class="fa-regular fa-calendar"></i>
-                                                        <input type="text" value="08/05/2026" class="reserve-input" readonly>
-                                                    </div>
+                                                <div class="success-pass-card">
+                                                    <div class="pass-barcode"><i class="fa-solid fa-barcode"></i></div>
+                                                    <span class="pass-code">PASS #POD-8842-X</span>
                                                 </div>
                                                 
-                                                <div class="reserve-grid-2">
-                                                    <div class="reserve-input-box">
-                                                        <i class="fa-regular fa-clock"></i>
-                                                        <input type="text" value="03:00 PM" class="reserve-input" readonly>
-                                                    </div>
-                                                    <div class="reserve-input-box">
-                                                        <i class="fa-regular fa-clock"></i>
-                                                        <input type="text" value="04:00 PM" class="reserve-input" readonly>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="packages-list">
-                                                    <label class="package-option">
-                                                        <input type="checkbox" class="package-check" data-price="1499" checked>
-                                                        <span class="package-custom-box"></span>
-                                                        <span class="package-name">Cinematic Experience-Lite</span>
-                                                        <span class="package-price">₹1499</span>
-                                                    </label>
-                                                    <label class="package-option">
-                                                        <input type="checkbox" class="package-check" data-price="2999">
-                                                        <span class="package-custom-box"></span>
-                                                        <span class="package-name">Cinematic Experience-Plus</span>
-                                                        <span class="package-price">₹2999</span>
-                                                    </label>
-                                                    <label class="package-option">
-                                                        <input type="checkbox" class="package-check" data-price="3499">
-                                                        <span class="package-custom-box"></span>
-                                                        <span class="package-name">Cinematic Experience-Pro</span>
-                                                        <span class="package-price">₹3499</span>
-                                                    </label>
-                                                </div>
-                                                
-                                                <button class="reserve-btn-submit" id="sim-reserve-submit-btn">Reserve Slot</button>
+                                                <button class="sim-btn-primary" id="success-done-btn">Back to Main Screen</button>
                                             </div>
                                         </div>
+                                        
                                     </div>
-                                    
-                                    <!-- Screen 6: Success Confirmation Screen -->
-                                    <div class="sim-screen sim-success" id="sim-screen-success">
-                                        <div class="success-glow"></div>
-                                        <div class="success-content">
-                                            <div class="success-icon-badge">
-                                                <i class="fa-solid fa-circle-check"></i>
-                                            </div>
-                                            <h3>Booking Confirmed!</h3>
-                                            <p class="success-summary">Your session at <strong>Chennai Podcast</strong> has been reserved for Friday, 08 May 2026 (03:00 PM - 04:00 PM).</p>
-                                            
-                                            <div class="success-pass-card">
-                                                <div class="pass-barcode"><i class="fa-solid fa-barcode"></i></div>
-                                                <span class="pass-code">PASS #POD-8842-X</span>
-                                            </div>
-                                            
-                                            <button class="sim-btn-primary" id="success-done-btn">Back to Main Screen</button>
-                                        </div>
-                                    </div>
-                                    
+                                    <div class="phone-home-indicator"></div>
                                 </div>
-                                <div class="phone-home-indicator"></div>
                             </div>
                         </div>
                     </div>
