@@ -849,6 +849,22 @@ section {
     right: 16px;
 }
 
+.slider-title {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 10;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+}
+
 .slider-counter {
     position: absolute;
     bottom: 16px;

@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const csPrevBtn = document.getElementById('case-study-prev');
     const csNextBtn = document.getElementById('case-study-next');
     const counterText = document.getElementById('case-study-counter');
+    const titleText = document.getElementById('case-study-title');
     let currentSlide = 0;
 
     if (sliderImages.length > 0 && csPrevBtn && csNextBtn && counterText) {
@@ -265,6 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             counterText.textContent = `${currentSlide + 1} / ${sliderImages.length}`;
+            if (titleText && sliderImages[currentSlide]) {
+                titleText.textContent = sliderImages[currentSlide].getAttribute('alt');
+            }
         };
 
         csPrevBtn.addEventListener('click', () => {
