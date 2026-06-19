@@ -2555,3 +2555,111 @@ footer p {
     }
 }
 
+/* ==========================================================================
+   USER RESEARCH FINDINGS
+   ========================================================================== */
+.research-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.research-card {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.research-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.research-stat-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 78, 205, 0.1), rgba(0, 212, 255, 0.1));
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.research-percentage {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.research-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.research-content h4 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.research-stat-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.research-insight {
+    background: rgba(0, 212, 255, 0.05);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.insight-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.research-insight p {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin: 0 !important;
+}
+
+@media (max-width: 576px) {
+    .research-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .research-stat-circle {
+        width: 60px;
+        height: 60px;
+    }
+    .research-percentage {
+        font-size: 18px;
+    }
+}
+
+
