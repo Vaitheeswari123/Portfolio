@@ -375,7 +375,7 @@
             max-width: 820px;
             display: flex;
             justify-content: center;
-            overflow: visible;
+            overflow: hidden;
         }
 
         .resume-container {
@@ -576,21 +576,30 @@
             const viewport = document.querySelector('.resume-viewport');
             if (!container || !viewport) return;
             
-            const viewportWidth = window.innerWidth;
+            // Reset styles first to get clean measurements
+            viewport.style.height = 'auto';
+            container.style.transform = 'none';
+            container.style.zoom = '1';
+            
+            const viewportWidth = viewport.clientWidth;
             const targetWidth = 820; // Width of A4 page container
             
-            if (viewportWidth < (targetWidth + 40)) {
-                // Determine scale ratio (with 20px padding margin on mobile)
-                const scale = (viewportWidth - 20) / targetWidth;
-                container.style.transform = `scale(${scale})`;
-                container.style.transformOrigin = 'top center';
+            if (viewportWidth < targetWidth) {
+                // Determine scale ratio (with a tiny margin)
+                const scale = (viewportWidth - 16) / targetWidth;
                 
-                // Adjust height of wrapper to match the scaled height
-                const scaledHeight = container.getBoundingClientRect().height;
-                viewport.style.height = `${scaledHeight}px`;
-            } else {
-                container.style.transform = 'none';
-                viewport.style.height = 'auto';
+                // Try using zoom first (highly responsive on mobile browsers)
+                if ('zoom' in document.documentElement.style) {
+                    container.style.zoom = scale;
+                } else {
+                    // Fallback to CSS transform scale
+                    container.style.transform = `scale(${scale})`;
+                    container.style.transformOrigin = 'top center';
+                    
+                    // Since transform scale doesn't affect parent container size, adjust height manually
+                    const scaledHeight = container.offsetHeight * scale;
+                    viewport.style.height = `${scaledHeight}px`;
+                }
             }
         }
         
