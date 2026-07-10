@@ -369,65 +369,38 @@
             }
         }
 
+        /* Viewport wrapper for PDF-like scaling on mobile */
+        .resume-viewport {
+            width: 100%;
+            max-width: 820px;
+            display: flex;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        .resume-container {
+            width: 820px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
         /* Mobile View Styles */
-        @media (max-width: 768px) {
+        @media (max-width: 820px) {
             body {
                 padding: 10px;
+                overflow-x: hidden;
             }
 
             .controls {
                 padding: 10px 16px;
                 border-radius: 6px;
-            }
-
-            .resume-header {
-                padding: 25px 20px 15px 20px;
-            }
-
-            .resume-header h1 {
-                font-size: 26px;
-            }
-
-            .resume-header .title {
-                font-size: 15px;
-                margin-bottom: 12px;
-            }
-
-            .resume-header .contact-info {
-                flex-direction: column;
-                gap: 6px;
-                font-size: 12.5px;
-            }
-
-            .resume-header .contact-info span:not(:last-child)::after {
-                display: none;
-            }
-
-            .resume-body {
-                grid-template-columns: 1fr;
-            }
-
-            .resume-left {
-                padding: 20px 20px;
-            }
-
-            .resume-right {
-                padding: 20px 20px;
-                border-left: none;
-                border-top: 1px solid var(--border-color);
-            }
-
-            .section {
-                margin-bottom: 22px;
-            }
-
-            .project-header {
-                flex-direction: column;
-                gap: 2px;
-            }
-
-            .project-date {
-                font-size: 11.5px;
+                width: 100%;
+                max-width: 820px;
             }
         }
     </style>
@@ -444,8 +417,10 @@
         </button>
     </div>
 
-    <!-- Resume Container -->
-    <div class="resume-container">
+    <!-- Resume Viewport for scaling on mobile -->
+    <div class="resume-viewport">
+        <!-- Resume Container -->
+        <div class="resume-container">
         <!-- Header -->
         <header class="resume-header">
             <h1>VAITHEESWARI G</h1>
@@ -594,5 +569,37 @@
         </div>
     </div>
 
+    <!-- Script to scale the resume container to fit mobile screens dynamically -->
+    <script>
+        function adjustScale() {
+            const container = document.querySelector('.resume-container');
+            const viewport = document.querySelector('.resume-viewport');
+            if (!container || !viewport) return;
+            
+            const viewportWidth = window.innerWidth;
+            const targetWidth = 820; // Width of A4 page container
+            
+            if (viewportWidth < (targetWidth + 40)) {
+                // Determine scale ratio (with 20px padding margin on mobile)
+                const scale = (viewportWidth - 20) / targetWidth;
+                container.style.transform = `scale(${scale})`;
+                container.style.transformOrigin = 'top center';
+                
+                // Adjust height of wrapper to match the scaled height
+                const scaledHeight = container.getBoundingClientRect().height;
+                viewport.style.height = `${scaledHeight}px`;
+            } else {
+                container.style.transform = 'none';
+                viewport.style.height = 'auto';
+            }
+        }
+        
+        window.addEventListener('resize', adjustScale);
+        window.addEventListener('load', adjustScale);
+        document.addEventListener('DOMContentLoaded', adjustScale);
+        
+        // Run once immediately
+        adjustScale();
+    </script>
 </body>
 </html>
