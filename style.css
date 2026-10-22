@@ -716,6 +716,138 @@ section {
     margin-top: 8px;
     font-weight: 500;
 }
+
+/* --- About Blocks (Education / Experience) --- */
+.about-block {
+    margin-bottom: 20px;
+}
+
+.about-block-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-block p {
+    color: var(--text-secondary);
+    margin-bottom: 0 !important;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* --- Philosophy & Goal Cards Row --- */
+.about-philosophy-goal-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.about-highlight-card {
+    border-radius: 14px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: var(--transition-smooth);
+}
+
+.philosophy-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(59, 130, 246, 0.08));
+}
+
+.goal-card-about {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(249, 115, 22, 0.08));
+}
+
+.about-highlight-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.about-highlight-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: rgba(255,255,255,0.07);
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.about-highlight-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.about-highlight-card p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 0 !important;
+}
+
+/* --- Tools Row --- */
+.about-tools-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.tools-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 4px;
+}
+
+.tool-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+}
+
+.tool-chip:hover {
+    background: rgba(139, 92, 246, 0.18);
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+    .about-philosophy-goal-row {
+        grid-template-columns: 1fr;
+    }
+}
 @media (max-width: 991px) {
     .about-premium-card {
         grid-template-columns: 1fr;
