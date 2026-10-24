@@ -398,8 +398,10 @@
                         <li><a href="#cs-empathy" class="cs-index-link"><span class="step-num">04</span> Empathy Mapping</a></li>
                         <li><a href="#cs-journey" class="cs-index-link"><span class="step-num">05</span> User Journey Map</a></li>
                         <li><a href="#cs-quantitative" class="cs-index-link"><span class="step-num">06</span> Quantitative Analysis</a></li>
-                        <li><a href="#cs-qualitative" class="cs-index-link"><span class="step-num">07</span> Qualitative Analysis</a></li>
-                        <li><a href="#cs-wireframes" class="cs-index-link"><span class="step-num">08</span> Design System</a></li>
+                        <li><a href="#cs-ia" class="cs-index-link"><span class="step-num">07</span> Information Architecture</a></li>
+                        <li><a href="#cs-userflow" class="cs-index-link"><span class="step-num">08</span> User Flow</a></li>
+                        <li><a href="#cs-qualitative" class="cs-index-link"><span class="step-num">09</span> Qualitative Analysis</a></li>
+                        <li><a href="#cs-wireframes" class="cs-index-link"><span class="step-num">10</span> Design System</a></li>
                     </ul>
                 </aside>
 
@@ -1060,7 +1062,253 @@
                         </div>
                     </div>
 
-                    <!-- Section 8: Design System -->
+                    <!-- Section 7: Information Architecture -->
+                    <div class="cs-scroll-section" id="cs-ia">
+                        <div class="ia-section">
+                            <h3>Information Architecture</h3>
+                            <p class="section-desc">The PodSpace app is organized into four primary navigation tabs, each containing focused sub-screens to give users a clear, intuitive path from discovery to booking.</p>
+
+                            <div class="ia-nav-tabs">
+                                <button class="ia-tab-btn active" data-tab="ia-home"><i class="fa-solid fa-house"></i> Home</button>
+                                <button class="ia-tab-btn" data-tab="ia-explore"><i class="fa-solid fa-compass"></i> Explore</button>
+                                <button class="ia-tab-btn" data-tab="ia-bookings"><i class="fa-solid fa-calendar-check"></i> Bookings</button>
+                                <button class="ia-tab-btn" data-tab="ia-profile"><i class="fa-solid fa-user"></i> Profile</button>
+                                <button class="ia-tab-btn" data-tab="ia-checkout"><i class="fa-solid fa-credit-card"></i> Checkout</button>
+                            </div>
+
+                            <!-- Home Tab -->
+                            <div class="ia-tab-content active" id="ia-home">
+                                <div class="ia-tree glass-card">
+                                    <div class="ia-root-node"><i class="fa-solid fa-house"></i> Home</div>
+                                    <div class="ia-children">
+                                        <div class="ia-child-node"><i class="fa-solid fa-magnifying-glass"></i> Search Studios</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-layer-group"></i> Categories</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-star"></i> Featured Studios</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-thumbs-up"></i> Recommended Studios</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Explore Tab -->
+                            <div class="ia-tab-content" id="ia-explore">
+                                <div class="ia-tree glass-card">
+                                    <div class="ia-root-node"><i class="fa-solid fa-compass"></i> Explore</div>
+                                    <div class="ia-children">
+                                        <div class="ia-child-node"><i class="fa-solid fa-list"></i> Studio Listings</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-sliders"></i> Filters &amp; Sorting</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-circle-info"></i> Studio Details</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-star-half-stroke"></i> Reviews &amp; Ratings</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bookings Tab -->
+                            <div class="ia-tab-content" id="ia-bookings">
+                                <div class="ia-tree glass-card">
+                                    <div class="ia-root-node"><i class="fa-solid fa-calendar-check"></i> Bookings</div>
+                                    <div class="ia-children">
+                                        <div class="ia-child-node"><i class="fa-solid fa-clock"></i> Select Date &amp; Time</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-file-lines"></i> Booking Summary</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-circle-check"></i> Booking Confirmation</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-clock-rotate-left"></i> Booking History</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Profile Tab -->
+                            <div class="ia-tab-content" id="ia-profile">
+                                <div class="ia-tree glass-card">
+                                    <div class="ia-root-node"><i class="fa-solid fa-user"></i> Profile</div>
+                                    <div class="ia-children">
+                                        <div class="ia-child-node"><i class="fa-solid fa-id-card"></i> Personal Details</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-bookmark"></i> Saved Studios</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-receipt"></i> Payment History</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-gear"></i> Help &amp; Settings</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Checkout Tab -->
+                            <div class="ia-tab-content" id="ia-checkout">
+                                <div class="ia-tree glass-card">
+                                    <div class="ia-root-node"><i class="fa-solid fa-credit-card"></i> Checkout &amp; Payment</div>
+                                    <div class="ia-children">
+                                        <div class="ia-child-node"><i class="fa-solid fa-wallet"></i> Payment Method</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-spinner"></i> Payment Status</div>
+                                        <div class="ia-child-node"><i class="fa-solid fa-file-invoice"></i> Receipt</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 8: User Flow -->
+                    <div class="cs-scroll-section" id="cs-userflow">
+                        <div class="ia-section">
+                            <h3>User Flow</h3>
+                            <p class="section-desc"><strong>Objective:</strong> Design a simple step-by-step journey that allows users to book a podcast recording studio with minimal effort.</p>
+
+                            <div class="userflow-diagram">
+                                <!-- Step 1 -->
+                                <div class="uf-node uf-start">
+                                    <div class="uf-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                                    <span>Open PodSpace</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Decision: Logged In? -->
+                                <div class="uf-decision">
+                                    <div class="uf-diamond">
+                                        <span>Logged in?</span>
+                                    </div>
+                                    <div class="uf-decision-branches">
+                                        <div class="uf-branch-no">
+                                            <span class="uf-branch-label">No</span>
+                                            <div class="uf-node uf-action">
+                                                <div class="uf-icon"><i class="fa-solid fa-user-plus"></i></div>
+                                                <span>Sign Up / Log In</span>
+                                            </div>
+                                        </div>
+                                        <div class="uf-branch-yes">
+                                            <span class="uf-branch-label">Yes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 2 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-house"></i></div>
+                                    <span>Home Screen</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 3 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                    <span>Search or Explore Studios</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 4 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-sliders"></i></div>
+                                    <span>Apply Filters</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 5 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                                    <span>Select a Studio</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 6 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-circle-info"></i></div>
+                                    <span>View Studio Details</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Decision: Suitable? -->
+                                <div class="uf-decision">
+                                    <div class="uf-diamond">
+                                        <span>Suitable Studio?</span>
+                                    </div>
+                                    <div class="uf-decision-branches">
+                                        <div class="uf-branch-no">
+                                            <span class="uf-branch-label">No</span>
+                                            <div class="uf-node uf-action uf-back">
+                                                <div class="uf-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                                                <span>Back to Listings</span>
+                                            </div>
+                                        </div>
+                                        <div class="uf-branch-yes">
+                                            <span class="uf-branch-label">Yes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 7 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                    <span>Select Date &amp; Time</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Decision: Slot Available? -->
+                                <div class="uf-decision">
+                                    <div class="uf-diamond">
+                                        <span>Slot Available?</span>
+                                    </div>
+                                    <div class="uf-decision-branches">
+                                        <div class="uf-branch-no">
+                                            <span class="uf-branch-label">No</span>
+                                            <div class="uf-node uf-action uf-back">
+                                                <div class="uf-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                                <span>Choose Another Slot</span>
+                                            </div>
+                                        </div>
+                                        <div class="uf-branch-yes">
+                                            <span class="uf-branch-label">Yes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 8 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-file-lines"></i></div>
+                                    <span>Review Booking Summary</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 9 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-credit-card"></i></div>
+                                    <span>Proceed to Payment</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Decision: Payment Successful? -->
+                                <div class="uf-decision">
+                                    <div class="uf-diamond">
+                                        <span>Payment Successful?</span>
+                                    </div>
+                                    <div class="uf-decision-branches">
+                                        <div class="uf-branch-no">
+                                            <span class="uf-branch-label">No</span>
+                                            <div class="uf-node uf-action uf-back">
+                                                <div class="uf-icon"><i class="fa-solid fa-rotate"></i></div>
+                                                <span>Retry Payment</span>
+                                            </div>
+                                        </div>
+                                        <div class="uf-branch-yes">
+                                            <span class="uf-branch-label">Yes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 10 -->
+                                <div class="uf-node uf-action">
+                                    <div class="uf-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                    <span>Booking Confirmation</span>
+                                </div>
+                                <div class="uf-arrow"></div>
+
+                                <!-- Step 11 -->
+                                <div class="uf-node uf-end">
+                                    <div class="uf-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                                    <span>View My Bookings</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 9: Design System -->
                     <div class="cs-scroll-section" id="cs-wireframes">
                         <div class="tab-grid">
                             <div>

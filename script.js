@@ -281,4 +281,28 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSlider();
         });
     }
+
+    /* ==========================================================================
+       INFORMATION ARCHITECTURE — INTERACTIVE TABS
+       ========================================================================== */
+    const iaTabBtns = document.querySelectorAll('.ia-tab-btn');
+    const iaTabContents = document.querySelectorAll('.ia-tab-content');
+
+    if (iaTabBtns.length > 0) {
+        iaTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-tab');
+                iaTabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                iaTabContents.forEach(content => {
+                    if (content.getAttribute('id') === targetId) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
 });
+
