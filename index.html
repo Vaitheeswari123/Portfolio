@@ -395,8 +395,8 @@
                         <li><a href="#cs-problem" class="cs-index-link active"><span class="step-num">01</span> Problem Statement</a></li>
                         <li><a href="#cs-user-research" class="cs-index-link"><span class="step-num">02</span> User Research</a></li>
                         <li><a href="#cs-info-arch" class="cs-index-link"><span class="step-num">03</span> Target Persona</a></li>
-                        <li><a href="#cs-empathy" class="cs-index-link"><span class="step-num">04</span> Empathy Mapping</a></li>
-                        <li><a href="#cs-journey" class="cs-index-link"><span class="step-num">05</span> User Journey Map</a></li>
+                        <li><a href="#cs-empathy" class="cs-index-link"><span class="step-num">04</span> User Journey Map</a></li>
+                        <li><a href="#cs-journey" class="cs-index-link"><span class="step-num">05</span> Empathy Mapping</a></li>
                         <li><a href="#cs-quantitative" class="cs-index-link"><span class="step-num">06</span> Quantitative Analysis</a></li>
                         <li><a href="#cs-ia" class="cs-index-link"><span class="step-num">07</span> Information Architecture</a></li>
                         <li><a href="#cs-userflow" class="cs-index-link"><span class="step-num">08</span> User Flow</a></li>
@@ -590,8 +590,88 @@
                         </div>
                     </div>
 
-                    <!-- Section 4: Empathy Mapping -->
+                    <!-- Section 4: User Journey Map (new 5-stage table) -->
                     <div class="cs-scroll-section" id="cs-empathy">
+                        <div class="journey-header">
+                            <h3>User Journey Map</h3>
+                            <p class="lead">Visualizing the 5 key stages of a user's journey — from discovering PodSpace to confirming a booking — across actions, thoughts, pain points, and design opportunities.</p>
+                        </div>
+
+                        <!-- Stage headers row -->
+                        <div class="ujm-table-wrapper">
+                            <div class="ujm-table">
+
+                                <!-- Stage Numbers & Names -->
+                                <div class="ujm-row ujm-stages-row">
+                                    <div class="ujm-row-label">Stage</div>
+                                    <div class="ujm-stage-cell ujm-stage-discover">
+                                        <div class="ujm-stage-num">01</div>
+                                        <div class="ujm-stage-name"><i class="fa-solid fa-binoculars"></i> Discover</div>
+                                    </div>
+                                    <div class="ujm-stage-cell ujm-stage-explore">
+                                        <div class="ujm-stage-num">02</div>
+                                        <div class="ujm-stage-name"><i class="fa-solid fa-compass"></i> Explore</div>
+                                    </div>
+                                    <div class="ujm-stage-cell ujm-stage-evaluate">
+                                        <div class="ujm-stage-num">03</div>
+                                        <div class="ujm-stage-name"><i class="fa-solid fa-scale-balanced"></i> Evaluate</div>
+                                    </div>
+                                    <div class="ujm-stage-cell ujm-stage-book">
+                                        <div class="ujm-stage-num">04</div>
+                                        <div class="ujm-stage-name"><i class="fa-solid fa-calendar-check"></i> Book</div>
+                                    </div>
+                                    <div class="ujm-stage-cell ujm-stage-confirm">
+                                        <div class="ujm-stage-num">05</div>
+                                        <div class="ujm-stage-name"><i class="fa-solid fa-circle-check"></i> Confirm</div>
+                                    </div>
+                                </div>
+
+                                <!-- User Actions -->
+                                <div class="ujm-row">
+                                    <div class="ujm-row-label"><i class="fa-solid fa-person-running"></i> User Actions</div>
+                                    <div class="ujm-cell">Opens PodSpace</div>
+                                    <div class="ujm-cell">Searches studios</div>
+                                    <div class="ujm-cell">Compares price and equipment</div>
+                                    <div class="ujm-cell">Selects a slot and pays</div>
+                                    <div class="ujm-cell">Checks booking status</div>
+                                </div>
+
+                                <!-- User Thoughts -->
+                                <div class="ujm-row ujm-row-thoughts">
+                                    <div class="ujm-row-label"><i class="fa-solid fa-thought-bubble"></i> User Thoughts</div>
+                                    <div class="ujm-cell"><span class="ujm-quote">"Where can I record?"</span></div>
+                                    <div class="ujm-cell"><span class="ujm-quote">"Which studios are nearby?"</span></div>
+                                    <div class="ujm-cell"><span class="ujm-quote">"Is this studio worth the price?"</span></div>
+                                    <div class="ujm-cell"><span class="ujm-quote">"Is my slot available?"</span></div>
+                                    <div class="ujm-cell"><span class="ujm-quote">"Did my booking succeed?"</span></div>
+                                </div>
+
+                                <!-- Pain Points -->
+                                <div class="ujm-row ujm-row-pain">
+                                    <div class="ujm-row-label"><i class="fa-solid fa-triangle-exclamation"></i> Pain Points</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-xmark ujm-pain-icon"></i> Unclear options</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-xmark ujm-pain-icon"></i> Too many choices</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-xmark ujm-pain-icon"></i> Missing details</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-xmark ujm-pain-icon"></i> Complex checkout</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-xmark ujm-pain-icon"></i> Unclear confirmation</div>
+                                </div>
+
+                                <!-- Design Opportunities -->
+                                <div class="ujm-row ujm-row-opps">
+                                    <div class="ujm-row-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Design Opportunities</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-check ujm-opp-icon"></i> Clear onboarding</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-check ujm-opp-icon"></i> Search and filters</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-check ujm-opp-icon"></i> Detailed studio pages</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-check ujm-opp-icon"></i> Simple booking flow</div>
+                                    <div class="ujm-cell"><i class="fa-solid fa-circle-check ujm-opp-icon"></i> Instant confirmation</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Empathy Mapping -->
+                    <div class="cs-scroll-section" id="cs-journey">
                         <div class="empathy-header">
                             <h3>Empathy Map</h3>
                             <p class="lead">Gaining deeper insights into the user's sensory, emotional, and cognitive experiences to build a human-centric solution.</p>
@@ -611,7 +691,7 @@
                                     <li>"I prefer booking studios from my mobile device."</li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Does -->
                             <div class="empathy-quadrant-card color-does">
                                 <div class="quadrant-header">
@@ -627,7 +707,7 @@
                                     <li>Uses filters to find suitable studios quickly.</li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Feels -->
                             <div class="empathy-quadrant-card color-feels">
                                 <div class="quadrant-header">
@@ -642,7 +722,7 @@
                                     <li>Satisfied when booking is completed smoothly.</li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Thinks -->
                             <div class="empathy-quadrant-card color-thinks">
                                 <div class="quadrant-header">
@@ -659,221 +739,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Section 5: User Journey Map -->
-                    <div class="cs-scroll-section" id="cs-journey">
-                        <div class="journey-header">
-                            <h3>User Journey Map</h3>
-                            <p class="lead">Visualizing the end-to-end user experience for podcasters, mapping stages from initial awareness to final content publishing.</p>
-                        </div>
-                        <div class="journey-scroll-wrapper">
-                            <div class="journey-stages-timeline">
-                                <!-- Stage 1 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 1</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-pink"><i class="fa-solid fa-bullhorn"></i></div>
-                                        <h4>Awareness</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Find a place to record a podcast</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Search online, Google, YouTube, social media</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>Is there a nearby studio for me?</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Too many options, unclear pricing</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> SEO website, clear value prop</span>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 2 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 2</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-purple"><i class="fa-solid fa-magnifying-glass"></i></div>
-                                        <h4>Consideration</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Compare different studios</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Check studio details, equipment, pricing</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>Is this studio worth the price?</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Missing equipment details, reviews</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Equipment lists, studio photos</span>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 3 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 3</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-teal"><i class="fa-regular fa-calendar-check"></i></div>
-                                        <h4>Booking</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Reserve a recording slot</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Select date, time, studio, confirm booking</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>I hope the booking is quick.</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Complicated booking process</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> One-tap booking, calendar sync</span>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 4 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 4</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-blue"><i class="fa-solid fa-clipboard-list"></i></div>
-                                        <h4>Preparation</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Get ready for recording</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Bring scripts, guests, equipment</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>Will everything work smoothly?</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Forgetting requirements</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Pre-recording checklist</span>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 5 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 5</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-yellow"><i class="fa-solid fa-microphone"></i></div>
-                                        <h4>Recording</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Record podcast episode</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Use microphones, cameras, software</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>I hope audio quality is good.</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Technical issues, setup confusion</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Technician support, setup tutorials</span>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 6 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 6</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-coral"><i class="fa-solid fa-sliders"></i></div>
-                                        <h4>Post-Recording</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Get edited content</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Download files or request editing</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>When will I receive my files?</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Delay in delivery</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Cloud download, tracker progress</span>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 7 -->
-                                <div class="journey-stage-card">
-                                    <div class="stage-badge">Stage 7</div>
-                                    <div class="stage-title-row">
-                                        <div class="stage-icon-circle accent-green"><i class="fa-solid fa-share-nodes"></i></div>
-                                        <h4>Sharing / Publishing</h4>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Goal</span>
-                                        <span class="meta-val">Publish and share content</span>
-                                    </div>
-                                    <div class="stage-meta-item">
-                                        <span class="meta-label">Actions</span>
-                                        <span class="meta-val">Upload to podcast platforms</span>
-                                    </div>
-                                    <div class="stage-quote-bubble">
-                                        <span class="quote-symbol">“</span>
-                                        <p>I want it to look professional.</p>
-                                    </div>
-                                    <div class="stage-meta-item stage-pain-points">
-                                        <span class="meta-label">Pain Points</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-xmark"></i> Format confusion</span>
-                                    </div>
-                                    <div class="stage-meta-item stage-opps">
-                                        <span class="meta-label">Opportunities</span>
-                                        <span class="meta-val"><i class="fa-solid fa-circle-check"></i> Publishing guide, export formats</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Section 6: Quantitative Analysis -->
                     <div class="cs-scroll-section" id="cs-quantitative">
                         <div class="qualitative-layout">

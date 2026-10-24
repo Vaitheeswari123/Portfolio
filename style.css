@@ -3450,3 +3450,172 @@ footer p {
     .uf-decision-branches { flex-direction: column; align-items: center; gap: 12px; }
 }
 
+/* ==========================================================================
+   USER JOURNEY MAP — 5-STAGE TABLE (SECTION 4)
+   ========================================================================== */
+.ujm-table-wrapper {
+    overflow-x: auto;
+    margin-top: 28px;
+    padding-bottom: 12px;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md);
+}
+
+.ujm-table {
+    min-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--surface-glass-border);
+}
+
+/* Each row */
+.ujm-row {
+    display: grid;
+    grid-template-columns: 180px repeat(5, 1fr);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ujm-row:last-child {
+    border-bottom: none;
+}
+
+/* Row label (left column) */
+.ujm-row-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 18px;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.03);
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.ujm-row-label i {
+    color: var(--accent);
+    font-size: 13px;
+}
+
+/* Stage header row */
+.ujm-stages-row {
+    background: rgba(0,0,0,0.2);
+}
+
+.ujm-stage-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 12px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    gap: 6px;
+    text-align: center;
+}
+
+.ujm-stage-cell:last-child { border-right: none; }
+
+.ujm-stage-num {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    opacity: 0.9;
+}
+
+.ujm-stage-name {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Per-stage colour theming */
+.ujm-stage-discover { background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(0,212,255,0.05)); color: #00d4ff; }
+.ujm-stage-explore  { background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(139,92,246,0.05)); color: #a78bfa; }
+.ujm-stage-evaluate { background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(249,115,22,0.05)); color: #fb923c; }
+.ujm-stage-book     { background: linear-gradient(135deg, rgba(255,78,205,0.15), rgba(255,78,205,0.05)); color: #ff4ecd; }
+.ujm-stage-confirm  { background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.05)); color: #34d399; }
+
+/* Data cells */
+.ujm-cell {
+    padding: 14px 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    border-right: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.5;
+    background: rgba(255,255,255,0.01);
+    transition: background 0.2s;
+}
+
+.ujm-cell:last-child { border-right: none; }
+
+.ujm-cell:hover {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+}
+
+/* User Thoughts row - italic quote style */
+.ujm-row-thoughts .ujm-cell {
+    background: rgba(0, 212, 255, 0.03);
+}
+
+.ujm-quote {
+    font-style: italic;
+    color: var(--accent);
+    font-size: 13px;
+}
+
+/* Pain Points row */
+.ujm-row-pain .ujm-cell {
+    background: rgba(255, 78, 205, 0.04);
+}
+
+.ujm-pain-icon {
+    color: #f87171;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Design Opportunities row */
+.ujm-row-opps .ujm-cell {
+    background: rgba(16, 185, 129, 0.04);
+}
+
+.ujm-opp-icon {
+    color: #34d399;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .ujm-row {
+        grid-template-columns: 130px repeat(5, 1fr);
+    }
+
+    .ujm-row-label {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .ujm-cell {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+    .ujm-stage-num { font-size: 18px; }
+    .ujm-stage-name { font-size: 11px; }
+}
+
